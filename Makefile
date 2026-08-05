@@ -1,66 +1,66 @@
-# Makefile for Tongji Thesis Template
+# Makefile para la plantilla de TFG de UGR
 
 ###################
-# Configuration
+# Configuracion
 ###################
 
-# Basename of thesis
-THESIS = main
+# Nombre del Tesis
+TESIS = main
 
-# LaTeX engines options
+# Opciones para LaTex
 ENGINES = -xelatex -lualatex
-ENGINE ?= -xelatex  # Default engine to XeLaTeX
+ENGINE ?= -xelatex  # Por defecto con xelatex si no se escribe nada
 
-# Check for required programs
+# Revisa programas requeridos
 REQUIRED_PROGRAMS := latexmk texcount
 $(foreach prog,$(REQUIRED_PROGRAMS),\
     $(if $(shell which $(prog)),,$(error "$(prog) not found in PATH")))
 
-# Check if engine is valid
-ifneq ($(filter all pvc, $(MAKECMDGOALS)), )
-    ifeq ($(filter $(ENGINES), $(ENGINE)), )
+# Revisa si las opciones son válidas
+ifneq ($(filter all pvc, $(MAKECMDGOALS)), ) # Si escribió all o pvc
+    ifeq ($(filter $(ENGINES), $(ENGINE)), ) # Si escribió xelatex y/o lualatex
         $(info Error: Expected $$ENGINE in {$(ENGINES)}, Got "$(ENGINE)")
         $(info Setting default $$ENGINE to "-xelatex")
         ENGINE = -xelatex
     endif
 endif
 
-# LaTeXmk options
+# Opciones para latexmk
 LATEXMK_OPT = \
-    -quiet \
-    -file-line-error \
-    -halt-on-error \
-    -interaction=nonstopmode \
-    -shell-escape \
-    -synctex=1 \
-    -recorder \
-    -usepretex="\listfiles" \
-    $(ENGINE)
+    -quiet \                   # Silencioso, sin la salida estándar masiva
+    -file-line-error \         # Si hubiera error indica la líneas
+    -halt-on-error \           # Si hay un error de sintaxis grave, se para
+    -interaction=nonstopmode \ # Seguir compilando con advertencias (warnings) 
+    -shell-escape \            # Permite que ejecute código externo 
+    -synctex=1 \               # Permite doble clic en el PDF para ir al código
+    -recorder \                # Registrar archivo auxiliares generados
+    -usepretex="\listfiles" \  # Inserta comando de depuración antes de compilar
+    $(ENGINE)                  # Añade la opción elegida
 
-# Preview continuous mode options
+# Para el modo de visualización en vivo
 LATEXMK_OPT_PVC = $(LATEXMK_OPT) -pvc
 
 ###################
-# OS Detection
+# Detección del SO
 ###################
 
-# Detect OS and set commands accordingly
+# Detectar el SO y configurar los comandos de forma respectiva
 ifdef SystemRoot
     # Windows
-    RM = del /Q
+    RM = del /Q # Borrar silencioso
     RMDIR = rmdir /S /Q
     MKDIR = mkdir
     OPEN = start
 else
     # Unix-like systems (Linux, macOS)
-    RM = rm -f
+    RM = rm -f # Borrar forzosamente
     RMDIR = rm -rf
     MKDIR = mkdir -p
     ifeq ($(shell uname),Darwin)
         # macOS
         OPEN = open
     else
-        # Linux and others
+        # Linux
         OPEN = xdg-open
     endif
 endif
