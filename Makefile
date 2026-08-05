@@ -5,7 +5,7 @@
 ###################
 
 # Nombre del Tesis
-TESIS = main
+THESIS = main
 
 # Opciones para LaTex
 ENGINES = -xelatex -lualatex
@@ -27,15 +27,15 @@ endif
 
 # Opciones para latexmk
 LATEXMK_OPT = \
-    -quiet \                   # Silencioso, sin la salida estándar masiva
-    -file-line-error \         # Si hubiera error indica la líneas
-    -halt-on-error \           # Si hay un error de sintaxis grave, se para
-    -interaction=nonstopmode \ # Seguir compilando con advertencias (warnings) 
-    -shell-escape \            # Permite que ejecute código externo 
-    -synctex=1 \               # Permite doble clic en el PDF para ir al código
-    -recorder \                # Registrar archivo auxiliares generados
-    -usepretex="\listfiles" \  # Inserta comando de depuración antes de compilar
-    $(ENGINE)                  # Añade la opción elegida
+    -quiet \
+    -file-line-error \
+    -halt-on-error \
+    -interaction=nonstopmode \
+    -shell-escape \
+    -synctex=1 \
+    -recorder \
+    -usepretex="\listfiles" \
+    $(ENGINE)
 
 # Para el modo de visualización en vivo
 LATEXMK_OPT_PVC = $(LATEXMK_OPT) -pvc
@@ -95,13 +95,13 @@ view: $(THESIS).pdf
 # Borrar archivos auxiliares
 clean:
 	@echo "Cleaning auxiliary files..."
-	-@latexmk -c -bibtex -silent $(THESIS).tex 2> /dev/null
+	-@latexmk -c -silent $(THESIS).tex 2> /dev/null
 	@echo "Clean complete."
 
 # Borrar todos los archivos generados
 cleanall:
 	@echo "Cleaning all generated files..."
-	-@latexmk -C -bibtex -silent $(THESIS).tex 2> /dev/null
+	-@latexmk -C -silent $(THESIS).tex 2> /dev/null
 	@echo "Clean complete."
 
 # Help target
