@@ -12,7 +12,7 @@ ENGINES = -xelatex -lualatex
 ENGINE ?= -xelatex  # Por defecto con xelatex si no se escribe nada
 
 # Revisa programas requeridos
-REQUIRED_PROGRAMS := latexmk texcount
+REQUIRED_PROGRAMS := latexmk
 $(foreach prog,$(REQUIRED_PROGRAMS),\
     $(if $(shell which $(prog)),,$(error "$(prog) not found in PATH")))
 
@@ -66,49 +66,39 @@ else
 endif
 
 ###################
-# Targets
+# Objetivos
 ###################
 
+# Forzamos las siguientes acciones ignorando el sistema de archivo
+# Regla FORCE_MAKE como regla vacía para forzar la reconstrucción de nuevo
 .PHONY: all thesis pvc view wordcount clean cleanall help FORCE_MAKE
 
-# Legacy alias
 thesis: all
 
-# Default target
+# Objetivo por defecto
 all: $(THESIS).pdf
 
-# Force remake
 $(THESIS).pdf: $(THESIS).tex FORCE_MAKE
-	@echo "Building $(THESIS).pdf with $(ENGINE)..."
+	@echo "Building $@ with $(ENGINE)..."
 	@latexmk $(LATEXMK_OPT) $<
 
-# Preview continuous mode
+# Modo de visualización en vivo
 pvc: $(THESIS).tex
 	@echo "Starting preview continuous mode..."
 	@latexmk $(LATEXMK_OPT_PVC) $(THESIS)
 
-# View PDF
+# Visualizar el pdf
 view: $(THESIS).pdf
 	@echo "Opening $(THESIS).pdf..."
 	$(OPEN) $<
 
-# Word count
-wordcount: $(THESIS).tex
-	@echo "Counting words in $(THESIS).tex..."
-	@if grep -v ^% $< | grep -q '\\documentclass\[[^\[]*english'; then \
-		texcount $< -inc -char-only | awk '/total/ {getline; print "英文字符数 (Latin characters)\t:",$$4}'; \
-	else \
-		texcount $< -inc -ch-only   | awk '/total/ {getline; print "纯中文字数 (Chinese characters)\t:",$$4}'; \
-	fi
-	@texcount $< -inc -chinese | awk '/total/ {getline; print "总字数 (Total characters)\t:",$$4}'
-
-# Clean auxiliary files
+# Borrar archivos auxiliares
 clean:
 	@echo "Cleaning auxiliary files..."
 	-@latexmk -c -bibtex -silent $(THESIS).tex 2> /dev/null
 	@echo "Clean complete."
 
-# Clean all generated files
+# Borrar todos los archivos generados
 cleanall:
 	@echo "Cleaning all generated files..."
 	-@latexmk -C -bibtex -silent $(THESIS).tex 2> /dev/null
@@ -120,7 +110,6 @@ help:
 	@echo "  all       - Build PDF (default)"
 	@echo "  pvc       - Preview continuously"
 	@echo "  view      - Open PDF"
-	@echo "  wordcount - Count words in Chinese and English"
 	@echo "  clean     - Remove auxiliary files"
 	@echo "  cleanall  - Remove all generated files"
 	@echo "  help      - Show this help message"
@@ -134,5 +123,5 @@ help:
 	@echo "  make ENGINE=-lualatex"
 	@echo "  make pvc"
 
-# Force remake
+# Force remake (regla vacía para forzar la reconstrucción del pdf)
 FORCE_MAKE:
