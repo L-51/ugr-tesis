@@ -6,39 +6,40 @@
 \documentclass[11pt, a4paper, twoside]{book}
 
 % Configuración
-\usepackage{config/ugr-setup}
-
-% Variables
-\newcommand{\titulo}{Título del trabajo}
-\newcommand{\autor}{Nombre Apellido1 Apellido2}
-\newcommand{\tutor}{Nombre del Tutor 1 \\ Nombre del Tutor 2}
-\newcommand{\departamento}{Dpto. de Matemática Aplicada \\ Dpto. de Lenguajes y Sistemas Informáticos}
-\newcommand{\titulacion}{Doble Grado en Ingeniería Informática y Matemáticas}
-\newcommand{\convocatoria}{Julio 2026}
+\input{config/packages}
+\input{config/settings}
+% \usepackage{styles/ugr-setup}
 
 % ------------------------------------------------------------------------------
 \begin{document}
+
+% Variables
+\newcommand{\tituloTFG}{Título del trabajo}
+\newcommand{\autorTFG}{Nombre Apellido1 Apellido2}
+\newcommand{\tutorTFG}{Nombre del Tutor 1 \\ Nombre del Tutor 2}
+\newcommand{\departamentoTFG}{Dpto. de Matemática Aplicada \\ Dpto. de Lenguajes y Sistemas Informáticos}
+\newcommand{\titulacionTFG}{Doble Grado en Ingeniería Informática y Matemáticas}
+\newcommand{\convocatoriaTFG}{Julio 2026}
 
 % --- Preliminares ---
 \frontmatter 
 
 % Comentar las portadas que no vayas a usar
-\include{portadas/portada-dgiim}
-% \include{portadas/portada-etsiit}
-% \include{portadas/portada-ciencias}
+% \include{covers/portada-dgiim}
+% \include{covers/portada-etsiit}
+% \include{covers/portada-ciencias}
 
-\include{portadas/declaracion} % Declaración de originalidad
+%\include{covers/declaracion} % Declaración de originalidad
 
 % Índices
-\tableofcontents    % Índice general
-\listoffigures      % Índice de figuras
-\listoftables       % Índice de tablas
+% \tableofcontents    % Índice general
+% \listoffigures      % Índice de figuras
+% \listoftables       % Índice de tablas
 
 % --- Cuerpo del TFG ---
 \mainmatter
 
-\include{capitulos/01-Introduccion}
-\include{capitulos/02-EstadoDelArte}
+\include{chapters/Cap-1.tex}
 
 % --- Bibliografía y Anexos ---
 \backmatter

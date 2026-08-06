@@ -29,9 +29,9 @@ endif
 LATEXMK_OPT = \
     -quiet \
     -file-line-error \
-    -halt-on-error \
     -interaction=nonstopmode \
     -shell-escape \
+    -halt-on-error \
     -synctex=1 \
     -recorder \
     -usepretex="\listfiles" \
@@ -79,7 +79,7 @@ thesis: all
 all: $(THESIS).pdf
 
 $(THESIS).pdf: $(THESIS).tex FORCE_MAKE
-	@echo "Building $@ with $(ENGINE)..."
+	@echo "Building $(THESIS).pdf with $(ENGINE)..."
 	@latexmk $(LATEXMK_OPT) $<
 
 # Modo de visualización en vivo
