@@ -1,1 +1,48 @@
+% ==============================================================================
+% PLANTILLA TFG/TFM - UNIVERSIDAD DE GRANADA
+% Doble Grado en Ingeniería Informática y Matemáticas (Adaptable)
+% ==============================================================================
 
+\documentclass[11pt, a4paper, twoside]{book}
+
+% Configuración
+\usepackage{config/ugr-setup}
+
+% Variables
+\newcommand{\titulo}{Título del trabajo}
+\newcommand{\autor}{Nombre Apellido1 Apellido2}
+\newcommand{\tutor}{Nombre del Tutor 1 \\ Nombre del Tutor 2}
+\newcommand{\departamento}{Dpto. de Matemática Aplicada \\ Dpto. de Lenguajes y Sistemas Informáticos}
+\newcommand{\titulacion}{Doble Grado en Ingeniería Informática y Matemáticas}
+\newcommand{\convocatoria}{Julio 2026}
+
+% ------------------------------------------------------------------------------
+\begin{document}
+
+% --- Preliminares ---
+\frontmatter 
+
+% Comentar las portadas que no vayas a usar
+\include{portadas/portada-dgiim}
+% \include{portadas/portada-etsiit}
+% \include{portadas/portada-ciencias}
+
+\include{portadas/declaracion} % Declaración de originalidad
+
+% Índices
+\tableofcontents    % Índice general
+\listoffigures      % Índice de figuras
+\listoftables       % Índice de tablas
+
+% --- Cuerpo del TFG ---
+\mainmatter
+
+\include{capitulos/01-Introduccion}
+\include{capitulos/02-EstadoDelArte}
+
+% --- Bibliografía y Anexos ---
+\backmatter
+
+\printbibliography[heading=bibintoc, title={Bibliografía}]
+
+\end{document}
