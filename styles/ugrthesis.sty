@@ -1,0 +1,119 @@
+% ========================================
+% ugr-thesis -- Plantilla de Tesis de la UGR
+% ========================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{styles/ugrthesis}[2026/08/06 v1.0.0 Configuracion UGR]
+
+%% Plantilla LaTeX para Trabajos Fin de Grado/Máster de la Universidad de Granada
+%% Autor: https://github.com/L-51
+%% Licencia: MIT
+
+% ========================================
+% Idiomas y Fuentes
+% ========================================
+\RequirePackage{iftex}
+% En función de que recipe se elija
+\ifPDFTeX
+    \RequirePackage[T1]{fontenc}
+    \RequirePackage[utf8]{inputenc}
+\else
+    \RequirePackage{fontspec}
+\fi
+\RequirePackage[spanish,es-tabla]{babel} % Idioma español
+
+% ========================================
+% Márgenes y Formato
+% ========================================
+\RequirePackage{parskip} % Espacio entre párrafos
+\RequirePackage[a4paper,top=3cm,bottom=3cm,inner=3.5cm,outer=2.5cm]{geometry}
+\RequirePackage{setspace}
+\onehalfspacing % Interlineado 1.5 en todo el documento
+
+% ========================================
+% Matemáticas
+% ========================================
+\RequirePackage{amsmath, amssymb, amsthm}
+
+% ========================================
+% Gráfica, Tikz y Colores
+% ========================================
+\RequirePackage{graphicx}
+% Definir dónde se guardan las imágenes por defecto
+\graphicspath{{figures/}{figures/logos/}}
+\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage{tikz}
+\usetikzlibrary{positioning}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.18}  % Use PGFPlots version 1.18, disables backward compatibility warnings
+\RequirePackage{float} % Posicionamiento de elementos flotantes
+
+% Colores corporativos UGR (Rojo Granate)
+\definecolor{UGRrojo}{RGB}{206,0,55}
+
+% ========================================
+% Listas y Código
+% ========================================
+\RequirePackage{enumitem}
+\RequirePackage{listings}
+% Traducir a español
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\lstlistlistingname}{Índice de Códigos}
+% Configuración del listings
+\lstset{
+    basicstyle=\ttfamily\normalsize,     
+    keywordstyle=\color{blue}\bfseries,           
+    commentstyle=\color{green!60!black}\itshape, 
+    stringstyle=\color{orange},          
+    numbers=left,                        
+    numberstyle=\tiny\color{gray},       
+    stepnumber=1,                        
+    breaklines=true,                     
+    frame=single,                        
+    showstringspaces=false,              
+    captionpos=b,                        
+    extendedchars=true,                  
+    literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+             {ñ}{{\~n}}1 {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1
+             {Ú}{{\'U}}1 {Ñ}{{\~N}}1 {ü}{{\"u}}1 {Ü}{{\"U}}1 {¿}{{\textquestiondown}}1 {¡}{{\textexclamdown}}1
+}
+
+% ========================================
+% Bibliografía y Citaciones
+% ========================================
+\RequirePackage{csquotes}
+\RequirePackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{references.bib} % Apunta a tu archivo de bibliografía
+
+% 7. MACROS PARA LA PORTADA (Necesario para el main.tex)
+% ------------------------------------------------------------------------------
+\newcommand{\tituloTFG}[1]{\def\@tituloTFG{#1}}
+\newcommand{\autorTFG}[1]{\def\@autorTFG{#1}}
+\newcommand{\tutorTFG}[1]{\def\@tutorTFG{#1}}
+\newcommand{\departamentoTFG}[1]{\def\@departamentoTFG{#1}}
+\newcommand{\titulacionTFG}[1]{\def\@titulacionTFG{#1}}
+\newcommand{\convocatoriaTFG}[1]{\def\@convocatoriaTFG{#1}}
+
+% ========================================
+% Hiperenlace
+% ========================================
+\RequirePackage[
+    colorlinks=true,
+    linkcolor=UGRrojo,
+    urlcolor=UGRrojo,
+    citecolor=UGRrojo
+]{hyperref}
+
+% ========================================
+% Cargar definiciones
+% ========================================
+
+\makeatletter
+% Carga de macros y portadas
+\InputIfFileExists{styles/ugrthesis.def}{}{
+    \PackageError{ugrthesis}{No encuentro el archivo ugrthesis.def}{Vuelve a descargar la plantilla de GitHub}
+}
+
+\InputIfFileExists{styles/ugr-cover.def}{}{
+    \PackageError{ugrthesis}{No encuentro el archivo ugr-cover.def}{Vuelve a descargar la plantilla de GitHub}
+}
+\makeatother

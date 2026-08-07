@@ -1,0 +1,47 @@
+% ========================================
+% Definiciones
+% ========================================
+\def\ugrthesis@tipoDocumento{}
+\def\ugrthesis@titulo{}
+\def\ugrthesis@tituloEN{}
+\def\ugrthesis@autor{}
+\def\ugrthesis@dni{}
+\def\ugrthesis@tutor{}
+\def\ugrthesis@email{}
+\def\ugrthesis@departamento{}
+\def\ugrthesis@centro{}
+\def\ugrthesis@fecha{}
+\def\ugrthesis@curso{}
+\def\ugrthesis@logoCentro{}
+\def\ugrthesis@logoCentroSec{\@empty}
+\def\ugrthesis@palabrasClave{}
+\def\ugrthesis@keywords{}
+
+% ========================================
+% API Pública
+% ========================================
+% Datos del Documento
+\newcommand{\tipoDocumento}[1]{\def\ugrthesis@tipoDocumento{#1}}
+\newcommand{\titulo}[1]{\def\ugrthesis@titulo{#1}}
+\newcommand{\tituloEN}[1]{\def\ugrthesis@tituloEN{#1}} % Para el abstract en inglés
+
+% Datos del Autor
+\newcommand{\autor}[1]{\def\ugrthesis@autor{#1}}
+\newcommand{\dni}[1]{\def\ugrthesis@dni{#1}} % Imprescindible para la Declaración jurada
+\newcommand{\email}[1]{\def\ugrthesis@email{#1}}
+
+% Datos Académicos
+\newcommand{\tutor}[1]{\def\ugrthesis@tutor{#1}}
+\newcommand{\departamento}[1]{\def\ugrthesis@departamento{#1}}
+\newcommand{\titulacion}[1]{\def\ugrthesis@titulacion{#1}}
+\newcommand{\centro}[1]{\def\ugrthesis@centro{#1}}
+\newcommand{\fecha}[1]{\def\ugrthesis@fecha{#1}} % Ej: "Granada, Julio de 2026"
+\newcommand{\curso}[1]{\def\ugrthesis@curso{#1}} % Ej: "Curso 2025-2026"
+
+% Logos de los Centros (Con soporte para Dobles Grados)
+\newcommand{\logoCentro}[1]{\def\ugrthesis@logoCentro{#1}}
+\newcommand{\logoCentroSec}[1]{\def\ugrthesis@logoCentroSec{#1}}
+
+% Resumen / Abstract
+\newcommand{\palabrasClave}[1]{\def\ugrthesis@palabrasClave{#1}}
+\newcommand{\keywords}[1]{\def\ugrthesis@keywords{#1}}

@@ -1,0 +1,27 @@
+\newcommand{\MakeCover}{
+    \begin{titlepage}
+        \newgeometry{left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}
+        \thispagestyle{empty}
+
+        % Marca de agua del fondo y el rectángulo rojo de abajo
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[
+                opacity=0.08, 
+                inner sep=0pt, 
+                anchor=center,
+                xshift=-1.2cm,
+                yshift=-3.5cm
+            ] at (current page.south east) {
+                \includegraphics[width=2\paperwidth]{figures/logos/logo_UGR.png}
+            };
+            \fill[UGRrojo]
+            (current page.south west)
+            rectangle
+            ([yshift=1cm]current page.south east);
+        \end{tikzpicture}
+
+        \begin{center}
+        	{\LARGE \textsc{\ugrthesis@tipoDocumento}}
+        \end{center}
+    \end{titlepage}
+}
