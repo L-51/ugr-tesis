@@ -1,0 +1,79 @@
+% ==============================================================================
+% PORTADA OFICIAL DE LA ETSIIT (UGR)
+% Creada para el Doble Grado en Ingeniería Informática y Matemáticas
+% ==============================================================================
+
+\begin{titlepage}
+    % Los márgenes de la portada deben ser simétricos (sin margen extra para encuadernar)
+    % Usamos geometry de forma temporal para esta página
+    \newgeometry{left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}
+    
+    % Evita el número de página en la portada
+    \thispagestyle{empty}
+
+    \begin{center}
+        
+        % 1. CABECERA CON LOGOS (UGR a la izq, ETSIIT a la der)
+        \begin{minipage}[c]{0.4\textwidth}
+            \begin{flushleft}
+                % Logo de la UGR (Ajusta la ruta si es diferente en tu carpeta)
+                \includegraphics[height=3.5cm]{figures/logos/logo_UGR.png}
+            \end{flushleft}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[c]{0.4\textwidth}
+            \begin{flushright}
+                % Logo de la ETSIIT
+                \includegraphics[height=3.5cm]{figures/logos/logo_etsiit.png}
+            \end{flushright}
+        \end{minipage}
+
+        \vspace{2cm}
+
+        % 2. NOMBRE DE LA TITULACIÓN Y UNIVERSIDAD
+        {\LARGE \textsc{Universidad de Granada}} \\
+        \vspace{0.5cm}
+        {\Large \textbf{Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación}} \\
+        \vspace{1.5cm}
+        {\Large \@titulacionTFG} \\ % Llama a la variable del main.tex
+        
+        \vspace{2cm}
+        
+        % 3. TIPO DE TRABAJO Y TÍTULO
+        {\Large \textit{Trabajo Fin de Grado}} \\
+        \vspace{0.5cm}
+        
+        % Título en grande y granate
+        \begin{minipage}{0.9\textwidth}
+            \centering
+            {\Huge \bfseries \textcolor{UGRrojo}{\@tituloTFG} \par}
+        \end{minipage}
+
+        \vfill % Empuja el resto hacia abajo
+
+        % 4. INFORMACIÓN DEL AUTOR Y TUTORES
+        \begin{flushleft}
+            \Large \textbf{Autor/a:}\\
+            \@autorTFG \\
+            
+            \vspace{1cm}
+            
+            \textbf{Tutor/es:}\\
+            \@tutorTFG \\
+            
+            \vspace{1cm}
+            
+            \textbf{Departamento/s:}\\
+            \@departamentoTFG
+        \end{flushleft}
+
+        \vspace{1cm}
+
+        % 5. FECHA
+        {\large \textbf{Granada, \@convocatoriaTFG}}
+
+    \end{center}
+
+    % Restauramos los márgenes normales para el resto del documento
+    \restoregeometry
+\end{titlepage}
