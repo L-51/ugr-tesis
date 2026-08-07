@@ -130,18 +130,15 @@ goto :help
 
 :clean
     echo Cleaning auxiliary files...
-    latexmk -c -bibtex -silent %THESIS%.tex 2>nul
+    latexmk -c -silent %THESIS%.tex 2>nul
+    del /S /Q *.aux *.bbl *.blg *.out *.toc *.lof *.lot 2>nul
     echo Clean complete.
     goto :EOF
 
 :cleanall
     echo Cleaning all generated files...
-    latexmk -C -bibtex -silent %THESIS%.tex 2>nul
-    if exist %THESIS%.pdf (
-        echo Close the file: '%THESIS%.pdf'!
-        pause
-        goto :cleanall
-    )
+    latexmk -C -silent %THESIS%.tex 2>nul
+    del /S /Q *.aux *.bbl *.blg *.out *.toc *.lof *.lot *.synctex.gz *.fls *.fdb_latexmk 2>nul
     echo Clean complete.
     goto :EOF
 
