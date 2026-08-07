@@ -104,7 +104,6 @@ goto :help
     echo   all       - Build PDF (default)
     echo   pvc       - Preview continuously
     echo   view      - Open PDF
-    echo   wordcount - Count words in Chinese and English
     echo   clean     - Remove auxiliary files
     echo   cleanall  - Remove all generated files
     echo   help      - Show this help message
