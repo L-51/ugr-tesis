@@ -96,12 +96,19 @@ view: $(THESIS).pdf
 clean:
 	@echo "Cleaning auxiliary files..."
 	-@latexmk -c -silent $(THESIS).tex 2> /dev/null
+	-@find . -name "*.aux" -type f -delete
+	-@find . -name "*.bbl" -type f -delete
+	-@find . -name "*.blg" -type f -delete
 	@echo "Clean complete."
 
 # Borrar todos los archivos generados
 cleanall:
 	@echo "Cleaning all generated files..."
 	-@latexmk -C -silent $(THESIS).tex 2> /dev/null
+	-@find . -name "*.aux" -type f -delete
+	-@find . -name "*.bbl" -type f -delete
+	-@find . -name "*.blg" -type f -delete
+	-@find . -name "*.synctex.gz" -type f -delete
 	@echo "Clean complete."
 
 # Help target
