@@ -1,0 +1,35 @@
+\newcommand{\MakeDeclaracion}{
+    \clearpage
+    \thispagestyle{empty}
+    \vspace*{2cm}
+    \begin{center}
+        {\Large \bfseries DECLARACIÓN DE ORIGINALIDAD}
+    \end{center}
+    \vspace{2cm}
+
+    \noindent
+    Yo, \textbf{\ugrthesis@autor}, con DNI \textbf{\ugrthesis@dni}, de la titulación \textbf{\ugrthesis@titulacion} de la \ugr, como \MakeLowercase{\ugrthesis@labelAutor} del Trabajo Fin de Grado titulado:
+
+    \vspace{0.5cm}
+    \begin{center}
+        \textit{\ugrthesis@titulo}
+    \end{center}
+    \vspace{0.5cm}
+
+    \noindent
+    \textbf{DECLARA QUE:}
+    \begin{itemize}
+        \item El trabajo aquí presentado es original y no ha sido plagiado total ni parcialmente.
+        \item Se han citado y referenciado rigurosamente todas las fuentes utilizadas.
+        \item Asume las consecuencias derivadas de la falsedad de esta declaración, de acuerdo a la normativa de evaluación de la Universidad de Granada.
+    \end{itemize}
+
+    \vspace{3cm}
+    \begin{flushright}
+        \ugrthesis@fecha \\
+        \vspace{2cm}
+        \rule{6cm}{0.4pt} \\
+        Fdo: \ugrthesis@autor
+    \end{flushright}
+    \clearpage
+}
