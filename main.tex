@@ -2,7 +2,7 @@
 % PLANTILLA TFG/TFM - UNIVERSIDAD DE GRANADA
 % ========================================
 
-\documentclass[11pt, a4paper, twoside]{book}
+\documentclass[11pt, a4paper, twoside, openany]{book}
 
 % Configuración
 \usepackage{styles/ugrthesis}
@@ -10,25 +10,33 @@
 % -----------------------------------------
 \begin{document}
 
+% -- Metadatos, Portada y Declaración Legal ---
 \input{chapters/metadata.tex}
 \MakeCover
+\MakeDeclaracion
 
 % --- Preliminares ---
-\frontmatter 
+\frontmatter
+% Opcional
+% \input{chapters/00-agradecimientos}
+\input{chapters/00_resumen}
+\input{chapters/00_abstract}
 
 % Índices
-% \tableofcontents    % Índice general
+\tableofcontents    % Índice general
+% Opcional
 % \listoffigures      % Índice de figuras
 % \listoftables       % Índice de tablas
 
 % --- Cuerpo del TFG ---
 \mainmatter
 
-\include{chapters/Cap-1.tex}
-
 % --- Bibliografía y Anexos ---
 \backmatter
 
 \printbibliography[heading=bibintoc, title={Bibliografía}]
+
+% Opcional
+\appendix
 
 \end{document}
