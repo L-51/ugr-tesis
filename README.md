@@ -6,4 +6,5 @@
   </picture>
   <h2>
   </h2>
+  <hr>
 </div>
