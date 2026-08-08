@@ -1,7 +1,6 @@
 {
     // Le decimos a Workshop qué receta (recipe) usar por defecto al guardar.
     "latex-workshop.latex.recipe.default": "first",
-    
     // Definimos las recetas (las acciones que verá el usuario)
     "latex-workshop.latex.recipes": [
         {
@@ -11,31 +10,49 @@
             ]
         }
     ],
-
     // Definimos las herramientas (cómo le habla Workshop a TeX Live)
     "latex-workshop.latex.tools": [
         {
             "name": "latexmk",
             "command": "latexmk",
             "args": [
-                "-synctex=1",       // Permite hacer clic en el PDF y saltar al código
+                "-synctex=1", // Permite hacer clic en el PDF y saltar al código
                 "-interaction=nonstopmode", // Si hay un error menor, no congela la compilación
                 "-file-line-error", // Muestra errores en el formato de VS Code
-                "-pdf",             // Obliga a sacar un PDF usando pdflatex
+                "-pdf", // Obliga a sacar un PDF usando pdflatex
                 "-outdir=%OUTDIR%", // Envía los archivos generados a la carpeta correcta
-                "%DOC%"             // El archivo principal (main.tex)
+                "%DOC%" // El archivo principal (main.tex)
             ],
             "env": {}
         }
     ],
-
     // OPCIONAL Y MUY RECOMENDADO: Limpiar archivos basura tras compilar
-    "latex-workshop.latex.autoClean.run": "onBuilt",
+    // "latex-workshop.latex.autoClean.run": "onBuilt",
     "latex-workshop.latex.clean.fileTypes": [
-        "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.ist", "*.fls", "*.log", "*.fdb_latexmk", "*.gz"
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.gz"
     ],
-
     "files.associations": {
         "*.def": "latex"
-    }
+    },
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.formatting.latexindent.path": "latexindent"
 }

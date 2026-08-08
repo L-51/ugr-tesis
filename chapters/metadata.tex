@@ -13,6 +13,11 @@
 % ========================================
 %  Datos del autor
 % ========================================
+% Ejemplo chica
+% \autor[Autora]{Ana García}
+% Ejemplo chico
+% \autor[Autor]{Juan Pérez}
+% Por defecto se mostrará Autor/a
 \autor{Nombre Apellido Apellido}
 \dni{12345678A}
 \email{nombre@correo.ugr.es}
@@ -21,10 +26,18 @@
 % ========================================
 %  Datos académicos
 % ========================================
-\tutor{Nombre Apellido del Tutor}
-\departamento{Departamento de ...}
-\titulacion{Grado en ...}
-\centro{Facultad/Escuela de ...}
+% Ejemplo un solo tutor
+% \tutor[Tutor]{Dr. Carlos Ruiz}
+% Por defecto se mostrará tutor/es
+\tutor[Tutores]{Dra. María Gómez \\ Dr. Carlos Ruiz}
+% Ejemplo un solo departamento
+% \departamento[Departamento]{Matemática Aplicada}
+% Por defecto se mostrará Departamento/s
+\departamento{Departamento de Matemática Aplicada \\ Departamento de Ciencias de la Computación e Inteligencia Artificial}
+\titulacion{Doble Grado en Ingeniería Informática y Matemáticas}
+\centro{Facultad de Ciencias}
+% Comentar para un solo grado
+\centroSec{Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación}
 \fecha{Granada, Julio de 2026}
 \curso{Curso 2025-2026}
 
@@ -32,9 +45,10 @@
 % ========================================
 %  Logos
 % ========================================
+\logoUGR{figures/logos/logo_UGR_alt.png}
 \logoCentro{figures/logos/logo_ciencias.png}
-% Descomentar para doble grado
-% \logoCentroSec{}
+% Comentar para un solo grado
+\logoCentroSec{figures/logos/logo_etsiit.png}
 
 
 % ========================================
