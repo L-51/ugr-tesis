@@ -1,8 +1,8 @@
 % ========================================
-% ugr-thesis -- Plantilla de Tesis de la UGR
+% ugr-tesis -- Plantilla de Tesis de la UGR
 % ========================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/ugrthesis}[2026/08/06 v0.2.0 Configuracion UGR]
+\ProvidesPackage{styles/ugrtesis}[2026/08/06 v0.2.0 Configuracion UGR]
 
 %% Plantilla LaTeX para Trabajos Fin de Grado/Máster de la Universidad de Granada
 %% Autor: https://github.com/L-51
@@ -30,8 +30,8 @@
 % Estilo para el Frontmatter (Números romanos en el centro, sin línea abajo)
 \fancypagestyle{frontstyle}{
     \fancyhf{}
-    \fancyhead[LE,LO]{\includegraphics[height=1cm]{\ugrthesis@logoUGR}\quad\textbf{\ugr}} % Arriba Izquierda: UGR
-    \fancyhead[RE,RO]{\textit{\ugrthesis@titulo}} % Arriba Derecha: Título
+    \fancyhead[LE,LO]{\includegraphics[height=1cm]{\ugrtesis@logoUGR}\quad\textbf{\ugr}} % Arriba Izquierda: UGR
+    \fancyhead[RE,RO]{\textit{\ugrtesis@titulo}} % Arriba Derecha: Título
     \fancyfoot[C]{\thepage} % Abajo Centro: Número de página
     \renewcommand{\headrulewidth}{0.4pt} % Línea arriba
     \renewcommand{\footrulewidth}{0pt}   % Sin línea abajo
@@ -39,23 +39,23 @@
 % Estilo para el Mainmatter (Números arábigos a la derecha, con línea abajo)
 \fancypagestyle{mainstyle}{
     \fancyhf{}
-    \fancyhead[LE,LO]{\includegraphics[height=1cm]{\ugrthesis@logoUGR}\quad\textbf{\ugr}}
-    \fancyhead[RE,RO]{\textit{\ugrthesis@titulo}}
+    \fancyhead[LE,LO]{\includegraphics[height=1cm]{\ugrtesis@logoUGR}\quad\textbf{\ugr}}
+    \fancyhead[RE,RO]{\textit{\ugrtesis@titulo}}
     \fancyfoot[RO,LE]{Página \thepage{} de \pageref*{LastPage}}
     \renewcommand{\headrulewidth}{0.4pt} % Línea arriba
     \renewcommand{\footrulewidth}{0.4pt} % Línea abajo
 }
 % Guardamos una copia de los comandos originales de LaTeX
-\let\ugrthesis@frontmatter\frontmatter
-\let\ugrthesis@mainmatter\mainmatter
+\let\ugrtesis@frontmatter\frontmatter
+\let\ugrtesis@mainmatter\mainmatter
 \renewcommand{\frontmatter}{%
-    \ugrthesis@frontmatter
+    \ugrtesis@frontmatter
     \pagestyle{frontstyle}%
     \fancypagestyle{plain}{\pagestyle{frontstyle}}%
 }
 
 \renewcommand{\mainmatter}{%
-    \ugrthesis@mainmatter
+    \ugrtesis@mainmatter
     \pagestyle{mainstyle}%
     \fancypagestyle{plain}{\pagestyle{mainstyle}}%
 }
@@ -148,16 +148,16 @@ literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
 % ========================================
 
 % Carga de macros y portadas
-\InputIfFileExists{styles/ugrthesis.def}{}{
-    \PackageError{ugrthesis}{No encuentro el archivo ugrthesis.def}{Vuelve a descargar la plantilla de GitHub}
+\InputIfFileExists{styles/ugrtesis.def}{}{
+    \PackageError{ugrtesis}{No encuentro el archivo ugrtesis.def}{Vuelve a descargar la plantilla de GitHub}
 }
 
 \InputIfFileExists{styles/ugr-cover.def}{}{
-    \PackageError{ugrthesis}{No encuentro el archivo ugr-cover.def}{Vuelve a descargar la plantilla de GitHub}
+    \PackageError{ugrtesis}{No encuentro el archivo ugr-cover.def}{Vuelve a descargar la plantilla de GitHub}
 }
 
 \InputIfFileExists{styles/ugr-statement.def}{}{
-    \PackageError{ugrthesis}{No encuentro el archivo ugrthesis.def}{Vuelve a descargar la plantilla de GitHub}
+    \PackageError{ugrtesis}{No encuentro el archivo ugrtesis.def}{Vuelve a descargar la plantilla de GitHub}
 }
 
 % ========================================
@@ -165,9 +165,9 @@ literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
 % ========================================
 \AtBeginDocument{
     \hypersetup{
-        pdftitle={\ugrthesis@titulo},
-        pdfauthor={\ugrthesis@autor},
-        pdfsubject={\ugrthesis@tipoDocumento - \ugrthesis@titulacion},
-        pdfkeywords={\ugrthesis@keywords}
+        pdftitle={\ugrtesis@titulo},
+        pdfauthor={\ugrtesis@autor},
+        pdfsubject={\ugrtesis@tipoDocumento - \ugrtesis@titulacion},
+        pdfkeywords={\ugrtesis@keywords}
     }
 }

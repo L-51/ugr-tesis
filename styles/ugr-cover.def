@@ -21,52 +21,52 @@
         \end{tikzpicture}
 
         \begin{center}
-            {\LARGE \textsc{\ugrthesis@tipoDocumento}} \\
+            {\LARGE \textsc{\ugrtesis@tipoDocumento}} \\
             \vspace{0.5cm}
-            {\Large \textbf{\ugrthesis@titulacion}} \\
+            {\Large \textbf{\ugrtesis@titulacion}} \\
             \vspace{0.5cm}
-            {\LARGE \textup{\ugrthesis@curso}} \\
+            {\LARGE \textup{\ugrtesis@curso}} \\
             \vspace{1.5cm}
-            \includegraphics[width=0.2\paperwidth]{\ugrthesis@logoUGR} \\
+            \includegraphics[width=0.2\paperwidth]{\ugrtesis@logoUGR} \\
             \vspace{0.5cm}
             {\huge \textbf{\ugr}} \\
             \vspace{1.5cm}
-            {\Huge \textbf{\ugrthesis@titulo}} \\
+            {\Huge \textbf{\ugrtesis@titulo}} \\
             \vspace{1.5cm}
-            {\Large \textbf{\ugrthesis@labelAutor:}} \\
-            {\Large \upshape \ugrthesis@autor} \\
+            {\Large \textbf{\ugrtesis@labelAutor:}} \\
+            {\Large \upshape \ugrtesis@autor} \\
             \vspace{0.5cm}
-            {\Large \textbf{\ugrthesis@labelTutor:}} \\
-            {\Large \upshape \ugrthesis@tutor} \\
+            {\Large \textbf{\ugrtesis@labelTutor:}} \\
+            {\Large \upshape \ugrtesis@tutor} \\
             \vspace{0.5cm}
-            {\Large \textbf{\ugrthesis@labelDepartamento:}} \\
-            {\Large \upshape \ugrthesis@departamento} \\
+            {\Large \textbf{\ugrtesis@labelDepartamento:}} \\
+            {\Large \upshape \ugrtesis@departamento} \\
             \vspace{1cm}
-            \ifx\ugrthesis@logoCentroSec\@empty
+            \ifx\ugrtesis@logoCentroSec\@empty
                 % Un solo centro
-                \includegraphics[height=1.4cm]{\ugrthesis@logoCentro} \\
+                \includegraphics[height=1.4cm]{\ugrtesis@logoCentro} \\
                 \vspace{0.3cm}
-                {\Large \bfseries\textsc{\ugrthesis@centro}} \\
+                {\Large \bfseries\textsc{\ugrtesis@centro}} \\
             \else
                 % Doble titulación
                 \begin{minipage}{0.49\textwidth}
                     \centering
-                    \includegraphics[height=1.4cm]{\ugrthesis@logoCentro} \\
+                    \includegraphics[height=1.4cm]{\ugrtesis@logoCentro} \\
                     \vspace{0.3cm}
-                    {\Large \bfseries\textsc{\ugrthesis@centro}}
+                    {\Large \bfseries\textsc{\ugrtesis@centro}}
                 \end{minipage}%
                 \vrule width 0.5pt%
                 \begin{minipage}{0.49\textwidth}
                     \centering
-                    \includegraphics[height=1.4cm]{\ugrthesis@logoCentroSec} \\
+                    \includegraphics[height=1.4cm]{\ugrtesis@logoCentroSec} \\
                     \vspace{0.3cm}
-                    {\Large \bfseries\textsc{\ugrthesis@centroSec}}
+                    {\Large \bfseries\textsc{\ugrtesis@centroSec}}
                 \end{minipage} \\
             \fi
             \vspace{1cm}
             \rule{0.5cm}{0.5pt} \\
             \vspace{0.3cm}
-            {\Large \textup{\ugrthesis@fecha}}
+            {\Large \textup{\ugrtesis@fecha}}
         \end{center}
     \end{titlepage}
 }

@@ -1,0 +1,72 @@
+% ========================================
+% Definiciones
+% ========================================
+\def\ugr{Universidad de Granada}
+\def\ugrEN{University of Granada}
+\def\ugrtesis@tipoDocumento{}
+\def\ugrtesis@titulo{}
+\def\ugrtesis@tituloEN{}
+
+\def\ugrtesis@labelAutor{}
+\def\ugrtesis@autor{}
+\def\ugrtesis@dni{}
+\def\ugrtesis@email{}
+
+\def\ugrtesis@labelTutor{}
+\def\ugrtesis@tutor{}
+\def\ugrtesis@labelDepartamento{}
+\def\ugrtesis@departamento{}
+\def\ugrtesis@titulacion{}
+
+\def\ugrtesis@centro{}
+\def\ugrtesis@centroSec{}
+
+\def\ugrtesis@fecha{}
+\def\ugrtesis@curso{}
+
+\def\ugrtesis@logoUGR{}
+\def\ugrtesis@logoCentro{}
+\def\ugrtesis@logoCentroSec{}
+
+\def\ugrtesis@palabrasClave{}
+\def\ugrtesis@keywords{}
+
+% ========================================
+% API Pública
+% ========================================
+% Datos del Documento
+\newcommand{\tipoDocumento}[1]{\def\ugrtesis@tipoDocumento{#1}}
+\newcommand{\titulo}[1]{\def\ugrtesis@titulo{#1}}
+\newcommand{\tituloEN}[1]{\def\ugrtesis@tituloEN{#1}} % Para el abstract en inglés
+
+% Datos del Autor
+\newcommand{\autor}[2][Autor/a]{
+    \def\ugrtesis@labelAutor{#1}
+    \def\ugrtesis@autor{#2}
+}
+\newcommand{\dni}[1]{\def\ugrtesis@dni{#1}}
+\newcommand{\email}[1]{\def\ugrtesis@email{#1}}
+
+% Datos Académicos
+\newcommand{\tutor}[2][Tutor/es]{
+    \def\ugrtesis@labelTutor{#1}
+    \def\ugrtesis@tutor{#2}
+}
+\newcommand{\departamento}[2][Departamento/s]{
+    \def\ugrtesis@labelDepartamento{#1}
+    \def\ugrtesis@departamento{#2}
+}
+\newcommand{\titulacion}[1]{\def\ugrtesis@titulacion{#1}}
+\newcommand{\centro}[1]{\def\ugrtesis@centro{#1}}
+\newcommand{\centroSec}[1]{\def\ugrtesis@centroSec{#1}}
+\newcommand{\fecha}[1]{\def\ugrtesis@fecha{#1}}
+\newcommand{\curso}[1]{\def\ugrtesis@curso{#1}}
+
+% Logos de los Centros (Con soporte para Dobles Grados)
+\newcommand{\logoUGR}[1]{\def\ugrtesis@logoUGR{#1}}
+\newcommand{\logoCentro}[1]{\def\ugrtesis@logoCentro{#1}}
+\newcommand{\logoCentroSec}[1]{\def\ugrtesis@logoCentroSec{#1}}
+
+% Resumen / Abstract
+\newcommand{\palabrasClave}[1]{\def\ugrtesis@palabrasClave{#1}}
+\newcommand{\keywords}[1]{\def\ugrtesis@keywords{#1}}

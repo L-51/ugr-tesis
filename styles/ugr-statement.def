@@ -8,28 +8,28 @@
     \vspace{2cm}
 
     \noindent
-    Yo, \textbf{\ugrthesis@autor}, con DNI \textbf{\ugrthesis@dni}, de la titulación \textbf{\ugrthesis@titulacion} de la \ugr, como \MakeLowercase{\ugrthesis@labelAutor} del Trabajo Fin de Grado titulado:
+    Yo, \textbf{\ugrtesis@autor}, con DNI \textbf{\ugrtesis@dni}, estudiante de la titulación \textbf{\ugrtesis@titulacion} de la \ugr, como \MakeLowercase{\ugrtesis@labelAutor} del Trabajo Fin de Grado titulado:
 
     \vspace{0.5cm}
     \begin{center}
-        \textit{\ugrthesis@titulo}
+        \textit{\ugrtesis@titulo}
     \end{center}
     \vspace{0.5cm}
 
     \noindent
-    \textbf{DECLARA QUE:}
+    \textbf{DECLARO QUE:}
     \begin{itemize}
         \item El trabajo aquí presentado es original y no ha sido plagiado total ni parcialmente.
         \item Se han citado y referenciado rigurosamente todas las fuentes utilizadas.
-        \item Asume las consecuencias derivadas de la falsedad de esta declaración, de acuerdo a la normativa de evaluación de la Universidad de Granada.
+        \item Asumo las consecuencias derivadas de la falsedad de esta declaración, de acuerdo a la normativa de evaluación de la Universidad de Granada.
     \end{itemize}
 
     \vspace{3cm}
     \begin{flushright}
-        \ugrthesis@fecha \\
+        \ugrtesis@fecha \\
         \vspace{2cm}
         \rule{6cm}{0.4pt} \\
-        Fdo: \ugrthesis@autor
+        Fdo: \ugrtesis@autor
     \end{flushright}
     \clearpage
 }
