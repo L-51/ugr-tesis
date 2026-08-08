@@ -1,2 +1,6 @@
-# ugr-tesis
-Plantilla LaTeX para TFG/TFM (UGR - Ciencias e Ingeniería) | LaTeX Thesis Template for University of Granada
+<div align="center">  
+  <p>
+    <source media="(prefers-color-scheme: dark)" srcset="/figures/ugr-tesis-dark.svg" >
+    <img src="/figures/ugr-tesis.svg"" alt="ugr-tesis">
+  </p>
+</div>
