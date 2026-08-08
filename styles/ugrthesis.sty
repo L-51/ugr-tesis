@@ -2,7 +2,7 @@
 % ugr-thesis -- Plantilla de Tesis de la UGR
 % ========================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/ugrthesis}[2026/08/06 v0.1.0 Configuracion UGR]
+\ProvidesPackage{styles/ugrthesis}[2026/08/06 v0.2.0 Configuracion UGR]
 
 %% Plantilla LaTeX para Trabajos Fin de Grado/Máster de la Universidad de Granada
 %% Autor: https://github.com/L-51
@@ -24,15 +24,63 @@
 % ========================================
 % Márgenes y Formato
 % ========================================
+\setlength{\headheight}{43pt} % Evitar warning de fancyhdr
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+% Estilo para el Frontmatter (Números romanos en el centro, sin línea abajo)
+\fancypagestyle{frontstyle}{
+    \fancyhf{}
+    \fancyhead[LE,LO]{\includegraphics[height=1cm]{\ugrthesis@logoUGR}\quad\textbf{\ugr}} % Arriba Izquierda: UGR
+    \fancyhead[RE,RO]{\textit{\ugrthesis@titulo}} % Arriba Derecha: Título
+    \fancyfoot[C]{\thepage} % Abajo Centro: Número de página
+    \renewcommand{\headrulewidth}{0.4pt} % Línea arriba
+    \renewcommand{\footrulewidth}{0pt}   % Sin línea abajo
+}
+% Estilo para el Mainmatter (Números arábigos a la derecha, con línea abajo)
+\fancypagestyle{mainstyle}{
+    \fancyhf{}
+    \fancyhead[LE,LO]{\includegraphics[height=1cm]{\ugrthesis@logoUGR}\quad\textbf{\ugr}}
+    \fancyhead[RE,RO]{\textit{\ugrthesis@titulo}}
+    \fancyfoot[RO,LE]{Página \thepage{} de \pageref*{LastPage}}
+    \renewcommand{\headrulewidth}{0.4pt} % Línea arriba
+    \renewcommand{\footrulewidth}{0.4pt} % Línea abajo
+}
+% Guardamos una copia de los comandos originales de LaTeX
+\let\ugrthesis@frontmatter\frontmatter
+\let\ugrthesis@mainmatter\mainmatter
+\renewcommand{\frontmatter}{%
+    \ugrthesis@frontmatter
+    \pagestyle{frontstyle}%
+    \fancypagestyle{plain}{\pagestyle{frontstyle}}%
+}
+
+\renewcommand{\mainmatter}{%
+    \ugrthesis@mainmatter
+    \pagestyle{mainstyle}%
+    \fancypagestyle{plain}{\pagestyle{mainstyle}}%
+}
 \RequirePackage{parskip} % Espacio entre párrafos
+% Evitar líneas "huérfanas"
+\clubpenalty=10000
+\widowpenalty=10000
 \RequirePackage[a4paper,top=3cm,bottom=3cm,inner=3.5cm,outer=2.5cm]{geometry}
 \RequirePackage{setspace}
 \onehalfspacing % Interlineado 1.5 en todo el documento
+\RequirePackage{emptypage}
 
 % ========================================
 % Matemáticas
 % ========================================
 \RequirePackage{amsmath, amssymb, amsthm}
+% Ajuste para teoremas, proposición y definición
+\theoremstyle{plain}
+\newtheorem{teorema}{Teorema}[chapter]
+\newtheorem{proposicion}[teorema]{Proposición}
+\newtheorem{lema}[teorema]{Lema}
+\theoremstyle{definition}
+\newtheorem{definicion}{Definición}[chapter]
+\theoremstyle{remark}
+\newtheorem{nota}{Nota}[chapter]
 
 % ========================================
 % Gráfica, Tikz y Colores
@@ -55,6 +103,7 @@
 % ========================================
 \RequirePackage{enumitem}
 \RequirePackage{listings}
+\RequirePackage[ruled,vlined,linesnumbered]{algorithm2e} % Pseudocódigo
 % Traducir a español
 \renewcommand{\lstlistingname}{Código}
 \renewcommand{\lstlistlistingname}{Índice de Códigos}
@@ -84,15 +133,6 @@ literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
 \RequirePackage[backend=biber,style=numeric]{biblatex}
 \addbibresource{references.bib} % Apunta a tu archivo de bibliografía
 
-% 7. MACROS PARA LA PORTADA (Necesario para el main.tex)
-% ------------------------------------------------------------------------------
-\newcommand{\tituloTFG}[1]{\def\@tituloTFG{#1}}
-\newcommand{\autorTFG}[1]{\def\@autorTFG{#1}}
-\newcommand{\tutorTFG}[1]{\def\@tutorTFG{#1}}
-\newcommand{\departamentoTFG}[1]{\def\@departamentoTFG{#1}}
-\newcommand{\titulacionTFG}[1]{\def\@titulacionTFG{#1}}
-\newcommand{\convocatoriaTFG}[1]{\def\@convocatoriaTFG{#1}}
-
 % ========================================
 % Hiperenlace
 % ========================================
@@ -107,7 +147,6 @@ literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
 % Cargar definiciones
 % ========================================
 
-\makeatletter
 % Carga de macros y portadas
 \InputIfFileExists{styles/ugrthesis.def}{}{
     \PackageError{ugrthesis}{No encuentro el archivo ugrthesis.def}{Vuelve a descargar la plantilla de GitHub}
@@ -116,4 +155,19 @@ literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
 \InputIfFileExists{styles/ugr-cover.def}{}{
     \PackageError{ugrthesis}{No encuentro el archivo ugr-cover.def}{Vuelve a descargar la plantilla de GitHub}
 }
-\makeatother
+
+\InputIfFileExists{styles/ugr-statement.def}{}{
+    \PackageError{ugrthesis}{No encuentro el archivo ugrthesis.def}{Vuelve a descargar la plantilla de GitHub}
+}
+
+% ========================================
+% Inyectar metadatos al PDF
+% ========================================
+\AtBeginDocument{
+    \hypersetup{
+        pdftitle={\ugrthesis@titulo},
+        pdfauthor={\ugrthesis@autor},
+        pdfsubject={\ugrthesis@tipoDocumento - \ugrthesis@titulacion},
+        pdfkeywords={\ugrthesis@keywords}
+    }
+}
