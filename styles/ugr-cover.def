@@ -34,13 +34,13 @@
             {\Huge \textbf{\ugrthesis@titulo}} \\
             \vspace{1.5cm}
             {\Large \textbf{\ugrthesis@labelAutor:}} \\
-            {\Large \textup{\ugrthesis@autor}} \\
+            {\Large \upshape \ugrthesis@autor} \\
             \vspace{0.5cm}
             {\Large \textbf{\ugrthesis@labelTutor:}} \\
-            {\Large \textup{\ugrthesis@tutor}} \\
+            {\Large \upshape \ugrthesis@tutor} \\
             \vspace{0.5cm}
             {\Large \textbf{\ugrthesis@labelDepartamento:}} \\
-            {\Large \textup{\ugrthesis@departamento}} \\
+            {\Large \upshape \ugrthesis@departamento} \\
             \vspace{1cm}
             \ifx\ugrthesis@logoCentroSec\@empty
                 % Un solo centro
@@ -61,9 +61,8 @@
                     \includegraphics[height=1.4cm]{\ugrthesis@logoCentroSec} \\
                     \vspace{0.3cm}
                     {\Large \bfseries\textsc{\ugrthesis@centroSec}}
-                \end{minipage}
+                \end{minipage} \\
             \fi
-            \\
             \vspace{1cm}
             \rule{0.5cm}{0.5pt} \\
             \vspace{0.3cm}
