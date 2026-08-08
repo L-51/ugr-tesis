@@ -1,6 +1,7 @@
 <div align="center">  
-  <p>
-    <source media="(prefers-color-scheme: dark)" srcset="/figures/ugr-tesis-dark.svg" >
-    <img src="/figures/ugr-tesis.svg"" alt="ugr-tesis">
-  </p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./figures/ugr-tesis-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./figures/ugr-tesis.svg">
+    <img alt="UGR Tesis Banner" src="./figures/ugr-tesis-dark.svg">
+  </picture>
 </div>
