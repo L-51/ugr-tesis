@@ -1,13 +1,13 @@
 \newcommand{\MakeCover}{
     \begin{titlepage}
-        \newgeometry{left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}
+        \newgeometry{left=2.5cm, right=2.5cm, top=1cm, bottom=1cm}
         \thispagestyle{empty}
 
         % Marca de agua del fondo y el rectángulo rojo de abajo
         \begin{tikzpicture}[remember picture, overlay]
             \node[
-                opacity=0.08, 
-                inner sep=0pt, 
+                opacity=0.08,
+                inner sep=0pt,
                 anchor=center,
                 xshift=-1.2cm,
                 yshift=-3.5cm
@@ -21,7 +21,53 @@
         \end{tikzpicture}
 
         \begin{center}
-        	{\LARGE \textsc{\ugrthesis@tipoDocumento}}
+            {\LARGE \textsc{\ugrthesis@tipoDocumento}} \\
+            \vspace{0.5cm}
+            {\Large \textbf{\ugrthesis@titulacion}} \\
+            \vspace{0.5cm}
+            {\LARGE \textup{\ugrthesis@curso}} \\
+            \vspace{1.5cm}
+            \includegraphics[width=0.2\paperwidth]{\ugrthesis@logoUGR} \\
+            \vspace{0.5cm}
+            {\huge \textbf{\ugr}} \\
+            \vspace{1.5cm}
+            {\Huge \textbf{\ugrthesis@titulo}} \\
+            \vspace{1.5cm}
+            {\Large \textbf{\ugrthesis@labelAutor:}} \\
+            {\Large \textup{\ugrthesis@autor}} \\
+            \vspace{0.5cm}
+            {\Large \textbf{\ugrthesis@labelTutor:}} \\
+            {\Large \textup{\ugrthesis@tutor}} \\
+            \vspace{0.5cm}
+            {\Large \textbf{\ugrthesis@labelDepartamento:}} \\
+            {\Large \textup{\ugrthesis@departamento}} \\
+            \vspace{1cm}
+            \ifx\ugrthesis@logoCentroSec\@empty
+                % Un solo centro
+                \includegraphics[height=1.4cm]{\ugrthesis@logoCentro} \\
+                \vspace{0.3cm}
+                {\Large \bfseries\textsc{\ugrthesis@centro}} \\
+            \else
+                % Doble titulación
+                \begin{minipage}{0.49\textwidth}
+                    \centering
+                    \includegraphics[height=1.4cm]{\ugrthesis@logoCentro} \\
+                    \vspace{0.3cm}
+                    {\Large \bfseries\textsc{\ugrthesis@centro}}
+                \end{minipage}%
+                \vrule width 0.5pt%
+                \begin{minipage}{0.49\textwidth}
+                    \centering
+                    \includegraphics[height=1.4cm]{\ugrthesis@logoCentroSec} \\
+                    \vspace{0.3cm}
+                    {\Large \bfseries\textsc{\ugrthesis@centroSec}}
+                \end{minipage}
+            \fi
+            \\
+            \vspace{1cm}
+            \rule{0.5cm}{0.5pt} \\
+            \vspace{0.3cm}
+            {\Large \textup{\ugrthesis@fecha}}
         \end{center}
     \end{titlepage}
 }
