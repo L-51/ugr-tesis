@@ -11,9 +11,11 @@
 \begin{document}
 
 % -- Metadatos, Portada y Declaración Legal ---
-\input{chapters/metadata.tex}
+\input{chapters/metadata}
 \MakeCover
+\cleardoublepage
 \MakeDeclaracion
+\cleardoublepage
 
 % --- Preliminares ---
 \frontmatter
@@ -31,9 +33,14 @@
 % --- Cuerpo del TFG ---
 \mainmatter
 
+\input{chapters/01_test}
+
 % --- Bibliografía y Anexos ---
 \backmatter
 
+% El comando \nocite{*} fuerza a que todas las entradas de references.bib 
+% aparezcan impresas aunque no hayan sido citadas explícitamente en el texto.
+\nocite{*}
 \printbibliography[heading=bibintoc, title={Bibliografía}]
 
 % Opcional
