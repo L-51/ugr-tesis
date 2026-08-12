@@ -6,6 +6,7 @@
 \def\ugrtesis@tipoDocumento{}
 \def\ugrtesis@titulo{}
 \def\ugrtesis@tituloEN{}
+\def\ugrtesis@colorEnlace{}
 
 \def\ugrtesis@labelAutor{}
 \def\ugrtesis@autor{}
@@ -38,6 +39,14 @@
 \newcommand{\tipoDocumento}[1]{\def\ugrtesis@tipoDocumento{#1}}
 \newcommand{\titulo}[1]{\def\ugrtesis@titulo{#1}}
 \newcommand{\tituloEN}[1]{\def\ugrtesis@tituloEN{#1}} % Para el abstract en inglés
+\newcommand{\colorEnlace}[1]{
+    \def\ugrtesis@colorEnlace{#1}
+    \hypersetup{
+        linkcolor=#1,
+        urlcolor=#1,
+        citecolor=#1
+    }
+}
 
 % Datos del Autor
 \newcommand{\autor}[2][Autor/a]{

@@ -2,7 +2,7 @@
 % ugr-tesis -- Plantilla de Tesis de la UGR
 % ========================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/ugrtesis}[2026/08/06 v0.2.0 Configuracion UGR]
+\ProvidesPackage{styles/ugrtesis}[2026/08/06 v0.3.0 Configuracion UGR]
 
 %% Plantilla LaTeX para Trabajos Fin de Grado/Máster de la Universidad de Granada
 %% Autor: https://github.com/L-51
@@ -39,13 +39,13 @@
 % Estilo para el Mainmatter (Números arábigos a la derecha, con línea abajo)
 \fancypagestyle{mainstyle}{
     \fancyhf{}
-    \fancyhead[LE,LO]{\includegraphics[height=1cm]{\ugrtesis@logoUGR}\quad\textbf{\ugr}}
+    \fancyhead[LE,LO]{\includegraphics[height=1cm]{\ugrtesis@logoUGR}\quad\textbf{UGR}}
     \fancyhead[RE,RO]{\textit{\ugrtesis@titulo}}
     \fancyfoot[RO,LE]{Página \thepage{} de \pageref*{LastPage}}
     \renewcommand{\headrulewidth}{0.4pt} % Línea arriba
     \renewcommand{\footrulewidth}{0.4pt} % Línea abajo
 }
-% Guardamos una copia de los comandos originales de LaTeX
+
 \let\ugrtesis@frontmatter\frontmatter
 \let\ugrtesis@mainmatter\mainmatter
 \renewcommand{\frontmatter}{%
@@ -59,6 +59,15 @@
     \pagestyle{mainstyle}%
     \fancypagestyle{plain}{\pagestyle{mainstyle}}%
 }
+% Para cambiar el formato de los capítulos
+\RequirePackage{titlesec}
+\titleformat{\chapter}[hang]
+{\Huge\bfseries}
+{\thechapter.}
+{20pt}
+{\Huge\bfseries}
+\titlespacing*{\chapter}{0pt}{-20pt}{30pt}
+
 \RequirePackage{parskip} % Espacio entre párrafos
 % Evitar líneas "huérfanas"
 \clubpenalty=10000
