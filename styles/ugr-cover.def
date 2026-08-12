@@ -1,6 +1,6 @@
 \newcommand{\MakeCover}{
     \begin{titlepage}
-        \newgeometry{left=2.5cm, right=2.5cm, top=1cm, bottom=1cm}
+        \newgeometry{left=2.5cm, right=2.5cm, top=1cm, bottom=2.5cm}
         \thispagestyle{empty}
 
         % Marca de agua del fondo y el rectángulo rojo de abajo
@@ -22,50 +22,50 @@
 
         \begin{center}
             {\LARGE \textsc{\ugrtesis@tipoDocumento}} \\
-            \vspace{0.5cm}
+            \vfill
             {\Large \textbf{\ugrtesis@titulacion}} \\
-            \vspace{0.5cm}
+            \vfill
             {\LARGE \textup{\ugrtesis@curso}} \\
-            \vspace{1.5cm}
+            \vfill
             \includegraphics[width=0.2\paperwidth]{\ugrtesis@logoUGR} \\
-            \vspace{0.5cm}
+            \vfill
             {\huge \textbf{\ugr}} \\
-            \vspace{1.5cm}
+            \vfill
             {\Huge \textbf{\ugrtesis@titulo}} \\
-            \vspace{1.5cm}
+            \vfill
             {\Large \textbf{\ugrtesis@labelAutor:}} \\
             {\Large \upshape \ugrtesis@autor} \\
-            \vspace{0.5cm}
+            \vfill
             {\Large \textbf{\ugrtesis@labelTutor:}} \\
             {\Large \upshape \ugrtesis@tutor} \\
-            \vspace{0.5cm}
+            \vfill
             {\Large \textbf{\ugrtesis@labelDepartamento:}} \\
             {\Large \upshape \ugrtesis@departamento} \\
-            \vspace{1cm}
+            \vfill
             \ifx\ugrtesis@logoCentroSec\@empty
                 % Un solo centro
                 \includegraphics[height=1.4cm]{\ugrtesis@logoCentro} \\
-                \vspace{0.3cm}
+                \vfill
                 {\Large \bfseries\textsc{\ugrtesis@centro}} \\
             \else
                 % Doble titulación
                 \begin{minipage}{0.49\textwidth}
                     \centering
                     \includegraphics[height=1.4cm]{\ugrtesis@logoCentro} \\
-                    \vspace{0.3cm}
+                    \vfill
                     {\Large \bfseries\textsc{\ugrtesis@centro}}
                 \end{minipage}%
                 \vrule width 0.5pt%
                 \begin{minipage}{0.49\textwidth}
                     \centering
                     \includegraphics[height=1.4cm]{\ugrtesis@logoCentroSec} \\
-                    \vspace{0.3cm}
+                    \vfill
                     {\Large \bfseries\textsc{\ugrtesis@centroSec}}
                 \end{minipage} \\
             \fi
-            \vspace{1cm}
+            \vfill
             \rule{0.5cm}{0.5pt} \\
-            \vspace{0.3cm}
+            \vfill
             {\Large \textup{\ugrtesis@fecha}}
         \end{center}
     \end{titlepage}
