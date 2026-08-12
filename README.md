@@ -1,6 +1,6 @@
 <div align="center">  
   <h2>
-  <\h2>
+  </h2>    
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./figures/ugr-tesis-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./figures/ugr-tesis.svg">
