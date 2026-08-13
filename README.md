@@ -14,3 +14,5 @@
   <a href="https://github.com/L-51/ugr-tesis/stargazers"><img src="https://img.shields.io/github/stars/L-51/ugr-tesis?style=for-the-badge" alt="Stars"></a>
   <hr>
 </div>
+
+Plantilla LaTeX profesional y adaptada a la normativa para TFG/TFM de la Universidad de Granada.
