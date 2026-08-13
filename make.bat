@@ -36,17 +36,10 @@ if %ERRORLEVEL% NEQ 0 (
     exit /b 1
 )
 
-where texcount >nul 2>&1
-if %ERRORLEVEL% NEQ 0 (
-    echo Error: texcount not found in PATH
-    exit /b 1
-)
-
 REM Execute the requested target
 if "%TARGET%"=="all" goto :all
 if "%TARGET%"=="pvc" goto :pvc
 if "%TARGET%"=="view" goto :view
-if "%TARGET%"=="wordcount" goto :wordcount
 if "%TARGET%"=="clean" goto :clean
 if "%TARGET%"=="cleanall" goto :cleanall
 if "%TARGET%"=="help" goto :help
