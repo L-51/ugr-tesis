@@ -10,14 +10,16 @@ set TARGET=%1
 if "%TARGET%"=="" set TARGET=all
 
 REM Engine handling
-set ENGINES=-xelatex -lualatex
+set ENGINES=-xelatex -lualatex -pdflatex
 set ENGINE=-xelatex
 if not "%~2"=="" (
     if "%~2"=="-xelatex" (
         set ENGINE=-xelatex
     ) else if "%~2"=="-lualatex" (
         set ENGINE=-lualatex
-    ) else (
+    ) else if "%~2"=="-pdflatex" (
+    	set ENGINE=-pdflatex
+    )else (
         echo Error: Expected $$ENGINE in {-xelatex, -lualatex}, Got "%~2"
         echo Setting default $$ENGINE to "-xelatex"
     )
@@ -105,6 +107,7 @@ goto :help
     echo Available engines (use as second parameter):
     echo   -xelatex (default)
     echo   -lualatex
+    echo   -pdflatex
     echo.
     echo Example usage:
     echo   make

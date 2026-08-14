@@ -8,7 +8,7 @@
 THESIS = main
 
 # Opciones para LaTex
-ENGINES = -xelatex -lualatex
+ENGINES = -xelatex -lualatex -pdflatex
 ENGINE ?= -xelatex  # Por defecto con xelatex si no se escribe nada
 
 # Revisa programas requeridos
@@ -124,6 +124,7 @@ help:
 	@echo "Available engines (use ENGINE=<option>):"
 	@echo "  -xelatex (default)"
 	@echo "  -lualatex"
+	@echo "  -pdflatex"
 	@echo ""
 	@echo "Example usage:"
 	@echo "  make"
