@@ -12,7 +12,7 @@
                 xshift=-1.2cm,
                 yshift=-3.5cm
             ] at (current page.south east) {
-                \includegraphics[width=2\paperwidth]{figures/logos/logo_UGR.png}
+                \includegraphics[width=2\paperwidth]{figures/logos/logo_UGR_watermark.png}
             };
             \fill[UGRrojo]
             (current page.south west)
@@ -69,4 +69,5 @@
             {\Large \textup{\ugrtesis@fecha}}
         \end{center}
     \end{titlepage}
+    \restoregeometry
 }
