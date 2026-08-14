@@ -28,7 +28,19 @@
 </div>
 
 # Vista previa
-<div align="center">
-  <img width=500 src="https://github.com/user-attachments/assets/ce01728e-b2b1-4a8a-b434-92a372406584" alt="ugr-cover">
-  <img width=500 src="https://github.com/user-attachments/assets/c863aea7-aae6-4c36-92d8-21eb43340f9e" alt="ugr-statement">
-</div>
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/ce01728e-b2b1-4a8a-b434-92a372406584" alt="ugr-cover">
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/c863aea7-aae6-4c36-92d8-21eb43340f9e" alt="ugr-statement">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/0c7304b9-c539-460d-8c91-27743e986803" alt="bibliografia">
+    </td>
+  </tr>
+</table>
