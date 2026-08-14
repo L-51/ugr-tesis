@@ -7,7 +7,7 @@
 \def\ugrtesis@titulo{}
 \def\ugrtesis@tituloEN{}
 \def\ugrtesis@colorEnlace{}
-\def\ugrthesis@firma{}
+\def\ugrtesis@firma{}
 
 \def\ugrtesis@labelAutor{}
 \def\ugrtesis@autor{}
@@ -48,7 +48,7 @@
         citecolor=#1
     }
 }
-\newcommand{\firma}[1]{\def\ugrthesis@firma{#1}}
+\newcommand{\firma}[1]{\def\ugrtesis@firma{#1}}
 
 % Datos del Autor
 \newcommand{\autor}[2][Autor/a]{
