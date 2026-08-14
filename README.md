@@ -18,4 +18,4 @@
   <hr>
 </div>
 
-Plantilla LaTeX profesional y adaptada a la normativa para TFG/TFM de la Universidad de Granada.
+Plantilla general para TFG/TFM de la UGR basada en requisitos y documentación institucionales. Los requisitos específicos de cada titulación deben comprobarse en su normativa correspondiente.
