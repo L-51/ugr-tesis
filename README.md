@@ -56,6 +56,7 @@
 ## Índice
 - [🚀 Quick Start](#-quick-start)
 - [🍃 Overleaf](#-overleaf)
+- [💻 Local](#-local)
   
 ## 🚀 Quick Start
 | Modo | Explicación |
@@ -70,3 +71,19 @@
 > Una vez estando en el proyecto:
 > File -> Settings -> Spelling and language, y en Spellcheck seleccionar **Spanish**.
 > File -> Settings -> Compiler, y en Main document seleccionar **main.tex**, Compiler seleccionar pdfLaTeX, XeLaTeX o LuaLaTeX.
+
+## 💻 Local
+[Instalar **MiKTeX**](https://miktex.org/download)(Recomendable en Windows si tiene problema de espacio con la opción **Install missing packages on-the-fly**) o **TeXLive**(Recomendable en general).
+
+#### TeXLive
+- **Windows**: <a href="https://tug.org/texlive/windows.html">Descargar TeXLive</a>
+- **Linux**: <code>sudo apt install texlive-full -y</code>
+- **MacOS**: <code>brew install --cask mactex</code>. En caso de no disponer <code>brew</code>: https://brew.sh/
+
+Clona este repositorio:
+
+```shell
+git clone https://github.com/L-51/ugr-tesis.git
+cd ugr-tesis
+```
+o [Descargar zip](https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) y tras eso abrilo.
