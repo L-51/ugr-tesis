@@ -56,6 +56,7 @@
 ## Índice
 - [🚀 Quick Start](#-quick-start)
 - [🍃 Overleaf](#-overleaf)
+- [💻 Local](#-local)
   
 ## 🚀 Quick Start
 | Modo | Explicación |
@@ -70,3 +71,5 @@
 > Una vez estando en el proyecto:
 > File -> Settings -> Spelling and language, y en Spellcheck seleccionar **Spanish**.
 > File -> Settings -> Compiler, y en Main document seleccionar **main.tex**, Compiler seleccionar pdfLaTeX, XeLaTeX o LuaLaTeX.
+
+## 💻 Local
