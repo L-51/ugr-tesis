@@ -52,9 +52,13 @@
 
 ## Índice
 - [🚀 Quick Start](#-quick-start)
+- [🍃 Overleaf](#-overleaf)
   
 ## 🚀 Quick Start
 | Modo | Explicación |
 | --- | --- |
-| **Overleaf** | [Abrir](https://www.overleaf.com/docs?snip_uri=https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) en Overleaf y... ¡Ya puedes comenzar con tu proyecto! |
+| **Overleaf** | [Abrir en Overleaf](https://www.overleaf.com/docs?snip_uri=https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) y... ¡Ya puedes comenzar con tu proyecto! |
 | **Local** | Instalar TeX Live 2026+, clona el repositorio y ejecuta `make` |
+
+## 🍃 Overleaf
+[Abrir en Overleaf](https://www.overleaf.com/docs?snip_uri=https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip)
