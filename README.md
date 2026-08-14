@@ -20,7 +20,6 @@
   <a href="https://www.overleaf.com/docs?snip_uri=https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip">
     <img src="https://img.shields.io/badge/Open%20in-Overleaf-47A141?style=for-the-badge&logo=overleaf" alt="Open in Overleaf">
   </a>
-  </br>
   <a href="https://www.ugr.es/"><img src="https://img.shields.io/badge/UGR-Tesis-000000?style=for-the-badge&labelColor=CE0037" alt="ugr-tesis-logo"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License MIT"></a>
   <img src="https://img.shields.io/badge/Engine-XeLaTeX%20%7C%20LuaLaTeX%20%7C%20pdfLaTex-47A141?style=for-the-badge" alt="Engines">
@@ -28,4 +27,4 @@
   <hr>
 </div>
 
-## Vista previa
+# Vista previa
