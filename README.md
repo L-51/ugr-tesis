@@ -73,3 +73,9 @@
 > File -> Settings -> Compiler, y en Main document seleccionar **main.tex**, Compiler seleccionar pdfLaTeX, XeLaTeX o LuaLaTeX.
 
 ## 💻 Local
+Clona este repositorio:
+```shell
+git clone https://github.com/L-51/ugr-tesis.git
+cd ugr-tesis
+```
+o [Descargar zip](https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) tras eso abrilo.
