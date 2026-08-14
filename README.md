@@ -51,7 +51,7 @@
 </table>
 
 ## Índice
-- (Quick Start)[#-quick-start]
+- [Quick Start](#quick-start)
   
 ## Quick Start
 | Modo | Explicación |
