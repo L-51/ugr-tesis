@@ -6,15 +6,19 @@
 
 % Cargar el paquete
 % Admite opciones:
+% 	top: Margen superior, por defeto 3cm
+%	bottom: Margen inferior, por defecto 3cm
+%	inner: Margen interior, por defecto 2.5cm
+%	outer: Margen exterior, por defecto 2.5cm
 %   bibstyle: Estilo de la bibliografía, apa, numeric(por defecto), ieee, etc.
 %   language: El lenguaje, english, spanish(por defecto), etc.
-%   font: Fuente de las letras, por defecto el clásico de LaTex
+%   font: Fuente del sistema cuando se utiliza XeLaTeX/LuaLaTeX y dicha fuente está disponible
 %   math: Cargar o no paquetes matemáticos, por defecto true
 %   code: Cargar o no paquetes informáticos, por defecto true
-% Por ejemplo para psicología:
+% Por ejemplo:
 % \usepackage[
 %   bibstyle = apa,
-%   font = Arial,
+%	bottom = 2.5cm,
 %   math = false,
 %   code = false
 % ]{styles/ugrtesis}

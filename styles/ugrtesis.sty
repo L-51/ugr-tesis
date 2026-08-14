@@ -17,6 +17,12 @@
     prefix=ugrtesis@
 }
 
+% Márgenes del documento
+\DeclareStringOption[3cm]{top}
+\DeclareStringOption[3cm]{bottom}
+\DeclareStringOption[3.5cm]{inner}
+\DeclareStringOption[2.5cm]{outer}
+\DeclareStringOption[onehalf]{spacing}
 % Estilo de bibliografía, por defecto numeric para ciencias/info
 \DeclareStringOption[numeric]{bibstyle}
 % Estilo de lenguaje, por defecto español
@@ -34,7 +40,7 @@
 % ========================================
 \RequirePackage{iftex}
 \RequirePackage{etoolbox}
-% En función de que recipe se elija
+% En función del motor se elija
 \ifPDFTeX
     \RequirePackage[T1]{fontenc}
     \RequirePackage[utf8]{inputenc}
@@ -101,7 +107,13 @@
 % Evitar líneas "huérfanas"
 \clubpenalty=10000
 \widowpenalty=10000
-\RequirePackage[a4paper,top=3cm,bottom=3cm,inner=3.5cm,outer=2.5cm]{geometry}
+\RequirePackage[
+    a4paper,
+    top=\ugrtesis@top,
+    bottom=\ugrtesis@bottom,
+    inner=\ugrtesis@inner,
+    outer=\ugrtesis@outer
+]{geometry}
 \RequirePackage{setspace}
 \onehalfspacing % Interlineado 1.5 en todo el documento
 \RequirePackage{emptypage}
