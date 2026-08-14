@@ -9,10 +9,13 @@
   
   <h2>    
   </h2>
-  
-  > Plantilla LaTeX para TFG/TFM de la Universidad de Granada, basada en documentación y requisitos institucionales.
-  > Los requisitos específicos de cada titulación deben comprobarse en su normativa correspondiente.
+</div>
+<p align="center"><strong> Plantilla LaTeX para TFG/TFM de la Universidad de Granada, basada en documentación y requisitos institucionales. </strong></p>
 
+> [!IMPORTANT]
+> Los requisitos específicos de cada titulación deben comprobarse en su normativa correspondiente.
+
+<div>
   <h2>
   </h2>
   
@@ -52,9 +55,18 @@
 
 ## Índice
 - [🚀 Quick Start](#-quick-start)
+- [🍃 Overleaf](#-overleaf)
   
 ## 🚀 Quick Start
 | Modo | Explicación |
 | --- | --- |
-| **Overleaf** | [Abrir](https://www.overleaf.com/docs?snip_uri=https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) en Overleaf y... ¡Ya puedes comenzar con tu proyecto! |
-| **Local** | Instalar TeX Live 2026+, clona el repositorio y ejecuta `make` |
+| **Overleaf** | [Abrir en Overleaf](https://www.overleaf.com/docs?snip_uri=https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) y... ¡Ya puedes comenzar con tu proyecto! |
+| **Local** | Instalar TeX Live, clona el repositorio y ejecuta `make` |
+
+## 🍃 Overleaf
+[Abrir en Overleaf](https://www.overleaf.com/docs?snip_uri=https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) para comenzar a trabajar directamente o [Descargar zip](https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) y crear un nuevo proyecto en Overleaf importándolo.
+
+> [!TIP]
+> Una vez estando en el proyecto:
+> File -> Settings -> Spelling and language, y en Spellcheck seleccionar **Spanish**.
+> File -> Settings -> Compiler, y en Main document seleccionar **main.tex**, Compiler seleccionar pdfLaTeX, XeLaTeX o LuaLaTeX.
