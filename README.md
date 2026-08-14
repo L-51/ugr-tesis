@@ -49,3 +49,10 @@
     </td>
   </tr>
 </table>
+
+## Índice
+## Quick Start
+| Modo | Explicación |
+| --- | --- |
+| **Overleaf** | [Abrir](https://www.overleaf.com/docs?snip_uri=https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) en Overleaf y... ¡Ya puedes comenzar con tu proyecto! |
+| **Local** |
