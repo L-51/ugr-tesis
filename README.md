@@ -30,5 +30,5 @@
 # Vista previa
 <div align="center">
   <img width=500 src="https://github.com/user-attachments/assets/ce01728e-b2b1-4a8a-b434-92a372406584" alt="ugr-cover">
-  
+  <img width=500 src="https://github.com/user-attachments/assets/c863aea7-aae6-4c36-92d8-21eb43340f9e" alt="ugr-statement">
 </div>
