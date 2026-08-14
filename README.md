@@ -28,3 +28,7 @@
 </div>
 
 # Vista previa
+<div align="center">
+  <img width=500 src="https://github.com/user-attachments/assets/ce01728e-b2b1-4a8a-b434-92a372406584" alt="ugr-cover">
+  
+</div>
