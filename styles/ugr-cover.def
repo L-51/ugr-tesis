@@ -46,21 +46,21 @@
                 % Un solo centro
                 \includegraphics[height=1.4cm]{\ugrtesis@logoCentro} \\
                 \vfill
-                {\Large \bfseries\textsc{\ugrtesis@centro}} \\
+                {\Large \textbf{\ugrtesis@centro}} \\
             \else
                 % Doble titulación
                 \begin{minipage}{0.49\textwidth}
                     \centering
                     \includegraphics[height=1.4cm]{\ugrtesis@logoCentro} \\
                     \vfill
-                    {\Large \bfseries\textsc{\ugrtesis@centro}}
+                    {\Large \textbf{\ugrtesis@centro}}
                 \end{minipage}%
                 \vrule width 0.5pt%
                 \begin{minipage}{0.49\textwidth}
                     \centering
                     \includegraphics[height=1.4cm]{\ugrtesis@logoCentroSec} \\
                     \vfill
-                    {\Large \bfseries\textsc{\ugrtesis@centroSec}}
+                    {\Large \textbf{\ugrtesis@centroSec}}
                 \end{minipage} \\
             \fi
             \vfill

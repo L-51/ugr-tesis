@@ -2,13 +2,27 @@
 % PLANTILLA TFG/TFM - UNIVERSIDAD DE GRANADA
 % ========================================
 
-\documentclass[11pt, a4paper, twoside, openany]{book}
+\documentclass[11pt, a4paper, twoside]{book}
 
-% Configuración
+% Cargar el paquete
+% Admite opciones:
+%   bibstyle: Estilo de la bibliografía, apa, numeric(por defecto), ieee, etc.
+%   language: El lenguaje, english, spanish(por defecto), etc.
+%   font: Fuente de las letras, por defecto el clásico de LaTex
+%   math: Cargar o no paquetes matemáticos, por defecto true
+%   code: Cargar o no paquetes informáticos, por defecto true
+% Por ejemplo para psicología:
+% \usepackage[
+%   bibstyle = apa,
+%   font = Arial,
+%   math = false,
+%   code = false
+% ]{styles/ugrthesis}
 \usepackage{styles/ugrtesis}
 
 % -----------------------------------------
 \begin{document}
+\hypersetup{pageanchor=false}
 
 % -- Metadatos, Portada y Declaración Legal ---
 \input{chapters/metadata}
@@ -16,6 +30,8 @@
 \cleardoublepage
 \MakeDeclaracion
 \cleardoublepage
+
+\hypersetup{pageanchor=true}
 
 % --- Preliminares ---
 \frontmatter

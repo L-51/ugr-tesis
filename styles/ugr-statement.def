@@ -27,7 +27,14 @@
     \vspace{3cm}
     \begin{flushright}
         \ugrtesis@fecha \\
-        \vspace{2cm}
+        \ifx\ugrthesis@firma\@empty
+            % Si el alumno NO puso firma, dejamos 2cm de espacio en blanco 
+            % para que imprima el folio y firme a bolígrafo.
+            \vspace{2.5cm}
+        \else
+            \vspace{0.5cm}
+            \includegraphics[height=2cm]{\ugrthesis@firma} \\
+        \fi
         \rule{6cm}{0.4pt} \\
         Fdo: \ugrtesis@autor
     \end{flushright}
