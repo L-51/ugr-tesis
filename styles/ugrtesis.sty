@@ -2,24 +2,53 @@
 % ugr-tesis -- Plantilla de Tesis de la UGR
 % ========================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/ugrtesis}[2026/08/06 v0.3.0 Configuracion UGR]
+\ProvidesPackage{styles/ugrtesis}[2026/08/06 v0.5.1 Configuracion UGR]
 
 %% Plantilla LaTeX para Trabajos Fin de Grado/Máster de la Universidad de Granada
 %% Autor: https://github.com/L-51
 %% Licencia: MIT
 
 % ========================================
+% Declaración de opciones
+% ========================================
+\RequirePackage{kvoptions}
+\SetupKeyvalOptions{
+    family=ugrtesis,
+    prefix=ugrtesis@
+}
+
+% Estilo de bibliografía, por defecto numeric para ciencias/info
+\DeclareStringOption[numeric]{bibstyle}
+% Estilo de lenguaje, por defecto español
+\DeclareStringOption[spanish]{language}
+% Fuente de las letras, por defecto, la fuente clásica de LaTex
+\DeclareStringOption[default]{font}
+% Opciones booleanas para cargar o no paquetes
+\DeclareBoolOption[true]{math}
+\DeclareBoolOption[true]{code}
+
+\ProcessKeyvalOptions*
+
+% ========================================
 % Idiomas y Fuentes
 % ========================================
 \RequirePackage{iftex}
+\RequirePackage{etoolbox}
 % En función de que recipe se elija
 \ifPDFTeX
     \RequirePackage[T1]{fontenc}
     \RequirePackage[utf8]{inputenc}
+    \ifdefstring{\ugrtesis@font}{default}{}{
+        \PackageWarning{ugrtesis}{
+            El motor pdfLaTeX no soporta fuentes del sistema directamente. Por favor, cambia el compilador a XeLaTeX en Overleaf/VS Code para usar la fuente '\ugrtesis@font', o ignora este aviso para continuar con la fuente estandar.}
+    }
 \else
     \RequirePackage{fontspec}
+    \ifdefstring{\ugrtesis@font}{default}{}{
+        \setmainfont{\ugrtesis@font}
+    }
 \fi
-\RequirePackage[spanish,es-tabla]{babel} % Idioma español
+\RequirePackage[\ugrtesis@language,es-tabla]{babel}
 
 % ========================================
 % Márgenes y Formato
@@ -30,7 +59,7 @@
 % Estilo para el Frontmatter (Números romanos en el centro, sin línea abajo)
 \fancypagestyle{frontstyle}{
     \fancyhf{}
-    \fancyhead[LE,LO]{\includegraphics[height=1cm]{\ugrtesis@logoUGR}\quad\textbf{\ugr}} % Arriba Izquierda: UGR
+    \fancyhead[LE,LO]{\includegraphics[height=1cm]{\ugrtesis@logoUGR}\quad\textbf{UGR}} % Arriba Izquierda: UGR
     \fancyhead[RE,RO]{\textit{\ugrtesis@titulo}} % Arriba Derecha: Título
     \fancyfoot[C]{\thepage} % Abajo Centro: Número de página
     \renewcommand{\headrulewidth}{0.4pt} % Línea arriba
@@ -80,16 +109,18 @@
 % ========================================
 % Matemáticas
 % ========================================
-\RequirePackage{amsmath, amssymb, amsthm}
-% Ajuste para teoremas, proposición y definición
-\theoremstyle{plain}
-\newtheorem{teorema}{Teorema}[chapter]
-\newtheorem{proposicion}[teorema]{Proposición}
-\newtheorem{lema}[teorema]{Lema}
-\theoremstyle{definition}
-\newtheorem{definicion}{Definición}[chapter]
-\theoremstyle{remark}
-\newtheorem{nota}{Nota}[chapter]
+\ifugrtesis@math
+    \RequirePackage{amsmath, amssymb, amsthm}
+    % Ajuste para teoremas, proposición y definición
+    \theoremstyle{plain}
+    \newtheorem{teorema}{Teorema}[chapter]
+    \newtheorem{proposicion}[teorema]{Proposición}
+    \newtheorem{lema}[teorema]{Lema}
+    \theoremstyle{definition}
+    \newtheorem{definicion}{Definición}[chapter]
+    \theoremstyle{remark}
+    \newtheorem{nota}{Nota}[chapter]
+\fi
 
 % ========================================
 % Gráfica, Tikz y Colores
@@ -111,36 +142,37 @@
 % Listas y Código
 % ========================================
 \RequirePackage{enumitem}
-\RequirePackage{listings}
-\RequirePackage[ruled,vlined,linesnumbered]{algorithm2e} % Pseudocódigo
-% Traducir a español
-\renewcommand{\lstlistingname}{Código}
-\renewcommand{\lstlistlistingname}{Índice de Códigos}
-% Configuración del listings
-\lstset{
-basicstyle=\ttfamily\normalsize,
-keywordstyle=\color{blue}\bfseries,
-commentstyle=\color{green!60!black}\itshape,
-stringstyle=\color{orange},
-numbers=left,
-numberstyle=\tiny\color{gray},
-stepnumber=1,
-breaklines=true,
-frame=single,
-showstringspaces=false,
-captionpos=b,
-extendedchars=true,
-literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
-{ñ}{{\~n}}1 {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1
-{Ú}{{\'U}}1 {Ñ}{{\~N}}1 {ü}{{\"u}}1 {Ü}{{\"U}}1 {¿}{{\textquestiondown}}1 {¡}{{\textexclamdown}}1
-}
+\ifugrtesis@code
+    \RequirePackage{listings}
+    \RequirePackage[ruled,vlined,linesnumbered]{algorithm2e} % Pseudocódigo
+    % Traducir a español
+    \renewcommand{\lstlistingname}{Código}
+    \renewcommand{\lstlistlistingname}{Índice de Códigos}
+    % Configuración del listings
+    \lstset{
+    basicstyle=\ttfamily\normalsize,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{green!60!black}\itshape,
+    stringstyle=\color{orange},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    breaklines=true,
+    frame=single,
+    showstringspaces=false,
+    captionpos=b,
+    extendedchars=true,
+    literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+    {ñ}{{\~n}}1 {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1
+    {Ú}{{\'U}}1 {Ñ}{{\~N}}1 {ü}{{\"u}}1 {Ü}{{\"U}}1 {¿}{{\textquestiondown}}1 {¡}{{\textexclamdown}}1
+    }
+\fi
 
 % ========================================
 % Bibliografía y Citaciones
 % ========================================
 \RequirePackage{csquotes}
-\RequirePackage[backend=biber,style=numeric]{biblatex}
-\addbibresource{references.bib} % Apunta a tu archivo de bibliografía
+\RequirePackage[backend=biber, style=\ugrtesis@bibstyle]{biblatex}\addbibresource{references.bib} % Apunta a tu archivo de bibliografía
 
 % ========================================
 % Hiperenlace
@@ -155,18 +187,16 @@ literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
 % ========================================
 % Cargar definiciones
 % ========================================
-
-% Carga de macros y portadas
 \InputIfFileExists{styles/ugrtesis.def}{}{
     \PackageError{ugrtesis}{No encuentro el archivo ugrtesis.def}{Vuelve a descargar la plantilla de GitHub}
 }
 
 \InputIfFileExists{styles/ugr-cover.def}{}{
-    \PackageError{ugrtesis}{No encuentro el archivo ugr-cover.def}{Vuelve a descargar la plantilla de GitHub}
+    \PackageError{ugrtesis}{No encuentro el archivo ugr-cover-modern.def}{Vuelve a descargar la plantilla de GitHub.}
 }
 
 \InputIfFileExists{styles/ugr-statement.def}{}{
-    \PackageError{ugrtesis}{No encuentro el archivo ugrtesis.def}{Vuelve a descargar la plantilla de GitHub}
+    \PackageError{ugrtesis}{No encuentro el archivo ugr-statement.def}{Vuelve a descargar la plantilla de GitHub}
 }
 
 % ========================================
