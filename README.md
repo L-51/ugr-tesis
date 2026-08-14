@@ -73,7 +73,37 @@
 > File -> Settings -> Compiler, y en Main document seleccionar **main.tex**, Compiler seleccionar pdfLaTeX, XeLaTeX o LuaLaTeX.
 
 ## 💻 Local
+Instalar **MiKTeX**(Recomendable en Windows si tiene problema de espacio con la opción **Install missing packages on-the-fly**) o **TeXLive**(Recomendable en general).
+
+<details>
+  <summary><b>Windows</b></summary>
+  <ul>
+    <li><a href="https://miktex.org/download">Descargar MiKTeX</a></li>
+    <li><a href="https://tug.org/texlive/windows.html">Descargar TeXLive</a></li>
+  </ul>
+</details>
+<details>
+  <summary><b>Linux</b></summary>
+  <ul>
+    <li><a href="https://miktex.org/download">Descargar MiKTeX</a></li>
+    <li>TeXLive:
+      <pre><code>sudo apt install texlive-full -y</code></pre>
+    </li>
+  </ul>
+</details>
+<details>
+  <summary><b>MacOS</b></summary>
+  <ul>
+    <li><a href="https://miktex.org/download">Descargar MiKTeX</a></li>
+    <li>MacTex:
+      <pre><code>brew install --cask mactex</code></pre>
+      En caso de no disponer <code>brew</code>: https://brew.sh/
+    </li>
+  </ul>
+</details>
+
 Clona este repositorio:
+
 ```shell
 git clone https://github.com/L-51/ugr-tesis.git
 cd ugr-tesis
