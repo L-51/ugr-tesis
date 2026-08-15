@@ -195,7 +195,7 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
   <li>
     <details>
       <summary><h3><b>¿Cómo hago un doble grado?</b></h3></summary>
-      En el archivo <code>metadata.tex` rellenar los datos en <code>\centroSec</code> y <code>\logoCentroSec</code>.
+      En el archivo <code>metadata.tex</code> rellenar los datos en <code>\centroSec</code> y <code>\logoCentroSec</code>.
     </details>
   </li>
   <li>
