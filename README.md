@@ -87,3 +87,36 @@ git clone https://github.com/L-51/ugr-tesis.git
 cd ugr-tesis
 ```
 o [Descargar zip](https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) y tras eso abrilo.
+
+### Línea de Comandos
+Para compilar:
+```shell
+$ make help
+Available targets:
+  all       - Build PDF (default)
+  pvc       - Preview continuously
+  view      - Open PDF
+  clean     - Remove auxiliary files
+  cleanall  - Remove all generated files
+  help      - Show this help message
+
+Available engines (use ENGINE=<option>):
+  -xelatex (default)
+  -lualatex
+  -pdflatex
+
+Example usage:
+  make
+  make ENGINE=-lualatex
+  make pvc
+```
+> [!NOTE]
+> En **Windows** en vez de `make` sería `.\make.bat`
+
+Y el PDF generado será:
+```
+main.pdf
+```
+### Visual Studio Code
+Instalar la extensión **LaTeX Workshop**, y abrir este directorio en VSC, la carpeta `ugr-tesis`.  
+Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticamente la compilación.
