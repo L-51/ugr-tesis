@@ -89,14 +89,14 @@ Clonas este repositorio:
 git clone https://github.com/L-51/ugr-tesis.git
 cd ugr-tesis
 ```
-o [Creas tú propio repositorio a partir de esta](https://github.com/L-51/ugr-tesis/generate) y ya clonas tú repositorio:
+o [Creas tú propio repositorio a partir de esta](https://github.com/L-51/ugr-tesis/generate) y ya clonas tu repositorio:
 
 ```shell
 git clone https://github.com/TU-USUARIO/TU-REPOSITORIO.git
 cd ugr-tesis
 ```
 
-o [Descargar zip](https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) y tras eso abrilo.
+o [Descargar zip](https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) y tras eso ábrelo.
 
 ### Línea de Comandos
 Para compilar:
@@ -141,12 +141,12 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
 ## ⚙️ Configuración
 | Archivo | ¿Lo modifico? |
 |---|---|
-| **`metadata.tex`** | Sí, es donde introducirás tús datos(Nombre, DNI, ...), los del documento(Título, Fecha,...), etc. para que sea reflejado en el documento |
+| **`metadata.tex`** | Sí, es donde introducirás tus datos(Nombre, DNI, ...), los del documento(Título, Fecha,...), etc. para que sea reflejado en el documento |
 | **`chapters/*.tex`** | Sí, son los diferentes capítulos que contendrán el documento |
-| **`references.bib`** | Sí, es donde incluirás las bibliografía |
+| **`references.bib`** | Sí, es donde incluirás la bibliografía |
 | **`main.tex`** | Ocasionalmente, para incluir nuevos capítulos o modificar preferencias del documento |
-| **`styles/ugrtesis.sty`** | Normalmente no, es el archivo donde definen los paquetes a incluir y diferentes tipos de configuración para la plantilla |
-| **`styles/*.def`** | Normalmente no, son los archivos donde se definen las API públicas |
+| **`styles/ugrtesis.sty`** | Normalmente no, es el archivo donde se definen los paquetes a incluir y diferentes tipos de configuración para la plantilla |
+| **`styles/*.def`** | Contienen las definiciones internas de la plantilla. Normalmente no es necesario modificarlos |
 
 ## ❔ FAQ
 <ol>
@@ -171,7 +171,7 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
   <li>
     <details>
       <summary><h3><b>¿Funciona en Overleaf?</b></h3></summary>
-      <b>Si</b>, puedes mirar el apartado de <a href="#-overleaf">Overleaf</a>.
+      <b>SÍ</b>, puedes mirar el apartado de <a href="#-overleaf">Overleaf</a>.
     </details>
   </li>
   <li>
@@ -189,7 +189,7 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
   <li>
     <details>
       <summary><h3><b>¿Cómo añado un segundo tutor?</b></h3></summary>
-      Editando el archivo <code>metadata.tex</code> al escribir los tutores separar los nombres mediante una doble barra <code>//</code>.
+      Editando el archivo <code>metadata.tex</code> al escribir los tutores separar los nombres mediante una doble barra <code>\\</code>.
     </details>
   </li>
   <li>
@@ -207,4 +207,4 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
 </ol>
 
 <h2></h2>
-<p align="center"><small>Esta proyecto está disponible bajo la <a href="./LICENSE">licencia MIT</a></small></p>
+<p align="center"><small>Este proyecto está disponible bajo la <a href="./LICENSE">licencia MIT</a></small></p>
