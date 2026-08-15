@@ -205,3 +205,6 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
     </details>
   </li>
 </ol>
+
+<h2></h2>
+<p align="center"><small>Esta proyecto está disponible bajo la <a href="./LICENSE">licencia MIT</a></small></p>
