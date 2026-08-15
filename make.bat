@@ -20,7 +20,7 @@ if not "%~2"=="" (
     ) else if "%~2"=="-pdflatex" (
     	set ENGINE=-pdflatex
     )else (
-        echo Error: Expected $$ENGINE in {-xelatex, -lualatex}, Got "%~2"
+        echo Error: Expected $$ENGINE in {-xelatex, -lualatex, -pdflatex}, Got "%~2"
         echo Setting default $$ENGINE to "-xelatex"
     )
 )
