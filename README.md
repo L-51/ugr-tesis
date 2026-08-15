@@ -146,7 +146,7 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
 | **`references.bib`** | Sí, es donde incluirás la bibliografía |
 | **`main.tex`** | Ocasionalmente, para incluir nuevos capítulos o modificar preferencias del documento |
 | **`styles/ugrtesis.sty`** | Normalmente no, es el archivo donde se definen los paquetes a incluir y diferentes tipos de configuración para la plantilla |
-| **`styles/*.def`** | Normalmente no, son los archivos donde se definen las API públicas |
+| **`styles/*.def`** | Contienen las definiciones internas de la plantilla. Normalmente no es necesario modificarlos |
 
 ## ❔ FAQ
 <ol>
@@ -189,7 +189,7 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
   <li>
     <details>
       <summary><h3><b>¿Cómo añado un segundo tutor?</b></h3></summary>
-      Editando el archivo <code>metadata.tex</code> al escribir los tutores separar los nombres mediante una doble barra <code>//</code>.
+      Editando el archivo <code>metadata.tex</code> al escribir los tutores separar los nombres mediante una doble barra <code>\\</code>.
     </details>
   </li>
   <li>
