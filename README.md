@@ -57,7 +57,7 @@
 - [🚀 Quick Start](#-quick-start)
 - [🍃 Overleaf](#-overleaf)
 - [💻 Local](#-local)
-- [⚙️ Configuración](#-configuración)
+- [⚙️ Configuración](#️-configuración)
   
 ## 🚀 Quick Start
 | Modo | Explicación |
