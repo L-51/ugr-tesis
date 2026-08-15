@@ -57,7 +57,7 @@
 - [🚀 Quick Start](#-quick-start)
 - [🍃 Overleaf](#-overleaf)
 - [💻 Local](#-local)
-- [⚙️ Configuración](#-configuración)
+- [⚙️ Configuración](#%EF%B8%8F-confi)
   
 ## 🚀 Quick Start
 | Modo | Explicación |
@@ -137,4 +137,4 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
 >   </tr>
 > </table>
 
-## ⚙️ Configuración
+## ⚙️ Confi
