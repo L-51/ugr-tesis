@@ -119,4 +119,11 @@ main.pdf
 ```
 ### Visual Studio Code
 Instalar la extensión **LaTeX Workshop**, y abrir este directorio en VSC, la carpeta `ugr-tesis`.  
-Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticamente la compilación.
+Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticamente la compilación.  
+> [!TIP]
+> <table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/54e4ea80-eb53-4963-9307-b6eae447d3a1" alt="Visor de PDF"></td>
+    <td>Este botón sirve para visualizar el PDF, muy útil para ver cambios generado en tiempo real por la compilación.</td>
+  </tr>
+</table>
