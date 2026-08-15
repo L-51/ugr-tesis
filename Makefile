@@ -12,7 +12,7 @@ ENGINES = -xelatex -lualatex -pdflatex
 ENGINE ?= -xelatex  # Por defecto con xelatex si no se escribe nada
 
 # Revisa programas requeridos
-REQUIRED_PROGRAMS := latexmk
+REQUIRED_PROGRAMS := latexmk biber
 $(foreach prog,$(REQUIRED_PROGRAMS),\
     $(if $(shell which $(prog)),,$(error "$(prog) not found in PATH")))
 

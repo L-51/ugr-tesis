@@ -37,6 +37,11 @@ if %ERRORLEVEL% NEQ 0 (
     echo Error: latexmk not found in PATH
     exit /b 1
 )
+where biber >nul 2>&1
+if %ERRORLEVEL% NEQ 0 (
+    echo Error: biber not found in PATH
+    exit /b 1
+)
 
 REM Execute the requested target
 if "%TARGET%"=="all" goto :all
