@@ -58,6 +58,7 @@
 - [🍃 Overleaf](#-overleaf)
 - [💻 Local](#-local)
 - [⚙️ Configuración](#️-configuración)
+- [❔ FAQ](#-faq)
   
 ## 🚀 Quick Start
 | Modo | Explicación |
@@ -138,3 +139,13 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
 > </table>
 
 ## ⚙️ Configuración
+| Archivo | ¿Lo modifico? |
+|---|---|
+| **`metadata.tex`** | Sí, es donde introducirás tús datos(Nombre, DNI, ...), los del documento(Título, Fecha,...), etc. para que sea reflejado en el documento |
+| **`chapters/*.tex`** | Sí, son los diferentes capítulos que contendrán el documento |
+| **`references.bib`** | Sí, es donde incluirás las bibliografía |
+| **`main.tex`** | Ocasionalmente, para incluir nuevos capítulos o modificar preferencias del documento |
+| **`styles/ugrtesis.sty`** | Normalmente no, es el archivo donde definen los paquetes a incluir y diferentes tipos de configuración para la plantilla |
+| **`styles/*.def`** | Normalmente no, son los archivos donde se definen las API públicas |
+
+## ❔ FAQ
