@@ -20,13 +20,13 @@ if not "%~2"=="" (
     ) else if "%~2"=="-pdflatex" (
     	set ENGINE=-pdflatex
     )else (
-        echo Error: Expected $$ENGINE in {-xelatex, -lualatex}, Got "%~2"
+        echo Error: Expected $$ENGINE in {-xelatex, -lualatex, -pdflatex}, Got "%~2"
         echo Setting default $$ENGINE to "-xelatex"
     )
 )
 
 REM LaTeXmk options
-set LATEXMK_OPT=-quiet -file-line-error -halt-on-error -interaction=nonstopmode -shell-escape -synctex=1 -recorder -usepretex="\listfiles" %ENGINE%
+set LATEXMK_OPT=-quiet -file-line-error -halt-on-error -interaction=nonstopmode -synctex=1 -recorder -usepretex="\listfiles" %ENGINE%
 
 REM LaTeXmk options for preview continuous mode
 set LATEXMK_OPT_PVC=%LATEXMK_OPT% -pvc
@@ -35,6 +35,11 @@ REM Check for required programs
 where latexmk >nul 2>&1
 if %ERRORLEVEL% NEQ 0 (
     echo Error: latexmk not found in PATH
+    exit /b 1
+)
+where biber >nul 2>&1
+if %ERRORLEVEL% NEQ 0 (
+    echo Error: biber not found in PATH
     exit /b 1
 )
 
