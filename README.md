@@ -149,3 +149,59 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
 | **`styles/*.def`** | Normalmente no, son los archivos donde se definen las API públicas |
 
 ## ❔ FAQ
+<ol>
+  <li>
+   <details>
+    <summary><h3><b>¿Es oficial?</b></h3></summary>
+    <b>NO</b>, es una plantilla comunitaria, no una plantilla oficial de la Universidad de Granada.
+  </details>
+  </li>
+  <li>
+    <details>
+      <summary><h3><b>¿Sirve para mi grado?</b></h3></summary>
+      Aunque es una plantilla que esta basada en documentación y requisitos institucionales, aún deben comprobar que lo que exige la normativa correspondiente de su titulación.
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary><h3><b>¿Sirve para TFM?</b></h3></summary>
+      Aunque es una plantilla que esta basada en documentación y requisitos institucionales, aún deben comprobar que lo que exige la normativa correspondiente de su titulación.
+    </details>
+  </li>
+  <li>¿Cómo compilo localmente?
+    <details>
+      <summary><h3><b>¿Funciona en Overleaf?</b></h3></summary>
+      <b>Si</b>, puedes mirar el apartado de <a href="#-overleaf">Overleaf</a>.
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary><h3><b>¿Qué archivos tengo que modificar?</b></h3></summary>
+      Principalmente `metadata.tex`, `main.tex`, `references.bib` y añadir/modificar capítulos en `chapters/` como se puede ver en la explicación de <a href="#️-configuración">Configuración</a>.
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary><h3><b>¿Cómo cambio la bibliografía?</b></h3></summary>
+      Editando el archivo `references.bib` cuál viene con unos ejemplos para hacer de guía en su uso.
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary><h3><b>¿Cómo añado un segundo tutor?</b></h3></summary>
+      Editando el archivo `metadata.tex` al escribir los tutores separar los nombres mediante una doble barra `//`.
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary><h3><b>¿Cómo hago un doble grado?</b></h3></summary>
+      En el archivo `metadata.tex` rellenar los datos en `\centroSec` y `\logoCentroSec`.
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary><h3><b>¿Cómo compilo localmente?</b></h3></summary>
+      Si es sistema Linux/MacOs, haciendo uso del archivo `make` y en caso de Windows con `make.bat` como se indica en apartado <a href="#-local">Local</a>.
+    </details>
+  </li>
+</ol>
