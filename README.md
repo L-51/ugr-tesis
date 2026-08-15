@@ -168,7 +168,7 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
       Aunque es una plantilla que esta basada en documentación y requisitos institucionales, aún deben comprobar que lo que exige la normativa correspondiente de su titulación.
     </details>
   </li>
-  <li>¿Cómo compilo localmente?
+  <li>
     <details>
       <summary><h3><b>¿Funciona en Overleaf?</b></h3></summary>
       <b>Si</b>, puedes mirar el apartado de <a href="#-overleaf">Overleaf</a>.
@@ -177,31 +177,31 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
   <li>
     <details>
       <summary><h3><b>¿Qué archivos tengo que modificar?</b></h3></summary>
-      Principalmente `metadata.tex`, `main.tex`, `references.bib` y añadir/modificar capítulos en `chapters/` como se puede ver en la explicación de <a href="#️-configuración">Configuración</a>.
+      Principalmente <code>metadata.tex</code>, <code>main.tex</code>, <code>references.bib</code> y añadir/modificar capítulos en <code>chapters/</code> como se puede ver en la explicación de <a href="#️-configuración">Configuración</a>.
     </details>
   </li>
   <li>
     <details>
       <summary><h3><b>¿Cómo cambio la bibliografía?</b></h3></summary>
-      Editando el archivo `references.bib` cuál viene con unos ejemplos para hacer de guía en su uso.
+      Editando el archivo <code>references.bib</code> cuál viene con unos ejemplos para hacer de guía en su uso.
     </details>
   </li>
   <li>
     <details>
       <summary><h3><b>¿Cómo añado un segundo tutor?</b></h3></summary>
-      Editando el archivo `metadata.tex` al escribir los tutores separar los nombres mediante una doble barra `//`.
+      Editando el archivo <code>metadata.tex</code> al escribir los tutores separar los nombres mediante una doble barra <code>//</code>.
     </details>
   </li>
   <li>
     <details>
       <summary><h3><b>¿Cómo hago un doble grado?</b></h3></summary>
-      En el archivo `metadata.tex` rellenar los datos en `\centroSec` y `\logoCentroSec`.
+      En el archivo <code>metadata.tex` rellenar los datos en <code>\centroSec</code> y <code>\logoCentroSec</code>.
     </details>
   </li>
   <li>
     <details>
       <summary><h3><b>¿Cómo compilo localmente?</b></h3></summary>
-      Si es sistema Linux/MacOs, haciendo uso del archivo `make` y en caso de Windows con `make.bat` como se indica en apartado <a href="#-local">Local</a>.
+      Si es sistema Linux/MacOs, haciendo uso del archivo <code>make</code> y en caso de Windows con <code>make.bat</code> como se indica en apartado <a href="#-local">Local</a>.
     </details>
   </li>
 </ol>
