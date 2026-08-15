@@ -57,12 +57,14 @@
 - [🚀 Quick Start](#-quick-start)
 - [🍃 Overleaf](#-overleaf)
 - [💻 Local](#-local)
+- [⚙️ Configuración](#️-configuración)
   
 ## 🚀 Quick Start
 | Modo | Explicación |
 | --- | --- |
 | **Overleaf** | [Abrir en Overleaf](https://www.overleaf.com/docs?snip_uri=https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) y... ¡Ya puedes comenzar con tu proyecto! |
 | **Local** | Instalar TeX Live, clona el repositorio y ejecuta `make` |
+| **GitHub Codespaces** | Próximamente|
 
 ## 🍃 Overleaf
 [Abrir en Overleaf](https://www.overleaf.com/docs?snip_uri=https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) para comenzar a trabajar directamente o [Descargar zip](https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) y crear un nuevo proyecto en Overleaf importándolo.
@@ -80,12 +82,19 @@
 - **Linux**: <code>sudo apt install texlive-full -y</code>
 - **MacOS**: <code>brew install --cask mactex</code>. En caso de no disponer <code>brew</code>: https://brew.sh/
 
-Clona este repositorio:
+Clonas este repositorio:
 
 ```shell
 git clone https://github.com/L-51/ugr-tesis.git
 cd ugr-tesis
 ```
+o [Creas tú propio repositorio a partir de esta](https://github.com/L-51/ugr-tesis/generate) y ya clonas tú repositorio:
+
+```shell
+git clone https://github.com/TU-USUARIO/TU-REPOSITORIO.git
+cd ugr-tesis
+```
+
 o [Descargar zip](https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip) y tras eso abrilo.
 
 ### Línea de Comandos
@@ -122,8 +131,10 @@ Instalar la extensión **LaTeX Workshop**, y abrir este directorio en VSC, la ca
 Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticamente la compilación.  
 > [!TIP]
 > <table>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/54e4ea80-eb53-4963-9307-b6eae447d3a1" alt="Visor de PDF"></td>
-    <td>Este botón sirve para visualizar el PDF, muy útil para ver cambios generado en tiempo real por la compilación.</td>
-  </tr>
-</table>
+>   <tr>
+>     <td><img src="https://github.com/user-attachments/assets/54e4ea80-eb53-4963-9307-b6eae447d3a1" alt="Visor de PDF"></td>
+>     <td>Este botón sirve para visualizar el PDF, muy útil para ver cambios generados en tiempo real durante la compilación.</td>
+>   </tr>
+> </table>
+
+## ⚙️ Configuración
