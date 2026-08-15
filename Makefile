@@ -30,7 +30,6 @@ LATEXMK_OPT = \
     -quiet \
     -file-line-error \
     -interaction=nonstopmode \
-    -shell-escape \
     -halt-on-error \
     -synctex=1 \
     -recorder \
