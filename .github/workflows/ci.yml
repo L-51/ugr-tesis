@@ -2,20 +2,89 @@ name: Test LaTeX Template
 
 on:
   push:
+    branches: main
+    paths-ignore:
+      - '*.md'
+      - 'LICENSE'
+      - '.gitignore'
+      - '.vscode/**'
   pull_request:
+    branches: main
+    paths-ignore:
+      - '*.md'
+      - 'LICENSE'
+      - '.gitignore'
+      - '.vscode/**'
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    name: ${{ matrix.os }} | ${{ matrix.compiler }}
+    
+    # 1. LA MAGIA: Probamos en Ubuntu, Windows y Mac
+    runs-on: ${{ matrix.os }}
+    
+    strategy:
+      fail-fast: false 
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        compiler: [-xelatex, -lualatex, -pdf]
 
     steps:
-      - name: Checkout repository
+      - name: Descargar el repositorio
         uses: actions/checkout@v4
 
-      - name: Install TeX Live
-        run: |
-          sudo apt-get update
-          sudo apt-get install texlive-full -y
+      - name: Instalar TeX Live
+        uses: tex-live/setup-texlive-action@v3
+        with:
+          packages: |
+            scheme-basic
+            latexmk
+            biber
+            biblatex
+            babel-spanish
+            fontspec
+            geometry
+            setspace
+            amsmath
+            amsfonts
+            xcolor
+            pgf
+            float
+            enumitem
+            listings
+            csquotes
+            hyperref
+            titlesec
+            etoolbox
+            kvoptions
+            iftex
+            emptypage
+            algorithm2e
 
-      - name: Build thesis
-        run: make
+      # 2. COMPILAR EN LINUX Y MAC (Usando tu Makefile)
+      - name: Compilar TFG (Unix)
+        if: runner.os != 'Windows'
+        run: make ENGINE=${{ matrix.compiler }} all
+
+      # 3. COMPILAR EN WINDOWS (Usando tu make.bat)
+      - name: Compilar TFG (Windows)
+        if: runner.os == 'Windows'
+        run: .\make.bat all ${{ matrix.compiler }}
+
+      # 4. LEER EL LOG EN CASO DE ERROR (Comandos distintos para cada OS)
+      - name: Mostrar Log en caso de error (Unix)
+        if: failure() && runner.os != 'Windows'
+        run: cat main.log
+
+      - name: Mostrar Log en caso de error (Windows)
+        if: failure() && runner.os == 'Windows'
+        run: type main.log
+
+      # 5. SUBIR EL ARCHIVO FINAL
+      - name: Subir PDF compilado a GitHub
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ugr-tesis-${{ matrix.os }}${{ matrix.compiler }}
+          path: main.pdf
+          retention-days: 7
