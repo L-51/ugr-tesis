@@ -8,7 +8,7 @@
 THESIS = main
 
 # Opciones para LaTex
-ENGINES = -xelatex -lualatex -pdflatex
+ENGINES = -xelatex -lualatex -pdf
 ENGINE ?= -xelatex  # Por defecto con xelatex si no se escribe nada
 
 # Revisa programas requeridos
