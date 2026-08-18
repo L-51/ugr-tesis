@@ -1,0 +1,88 @@
+name: Test LaTeX Template
+
+on:
+  push:
+    branches: main
+    paths-ignore:
+      - '*.md'
+      - 'LICENSE'
+      - '.gitignore'
+      - '.vscode/**'
+  pull_request:
+    branches: main
+    paths-ignore:
+      - '*.md'
+      - 'LICENSE'
+      - '.gitignore'
+      - '.vscode/**'
+
+jobs:
+  build:
+    name: ${{ matrix.os }} | ${{ matrix.compiler }}
+    
+    runs-on: ${{ matrix.os }}
+    
+    strategy:
+      fail-fast: false 
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        compiler: [-xelatex, -lualatex, -pdf]
+
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar TeX Live
+        uses: tex-live/setup-texlive-action@v3
+        with:
+          packages: |
+            scheme-basic
+            latexmk
+            biber
+            biblatex
+            babel-spanish
+            fontenc
+            inputenc
+            fontspec
+            geometry
+            setspace
+            amsmath
+            amsfonts
+            xcolor
+            pgf
+            pgfplots
+            float
+            enumitem
+            listings
+            csquotes
+            hyperref
+            titlesec
+            etoolbox
+            kvoptions
+            iftex
+            emptypage
+            algorithm2e
+
+      - name: Compilar TFG (Unix)
+        if: runner.os != 'Windows'
+        run: make ENGINE=${{ matrix.compiler }} all
+
+      - name: Compilar TFG (Windows)
+        if: runner.os == 'Windows'
+        run: .\make.bat all ${{ matrix.compiler }}
+
+      - name: Mostrar Log en caso de error (Unix)
+        if: failure() && runner.os != 'Windows'
+        run: cat main.log
+
+      - name: Mostrar Log en caso de error (Windows)
+        if: failure() && runner.os == 'Windows'
+        run: type main.log
+
+      - name: Subir PDF compilado a GitHub
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ugr-tesis-${{ matrix.os }}${{ matrix.compiler }}
+          path: main.pdf
+          retention-days: 7
