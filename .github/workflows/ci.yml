@@ -32,7 +32,7 @@ jobs:
 
     steps:
       - name: Descargar el repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Instalar TeX Live
         uses: tex-live/setup-texlive-action@v4
@@ -102,7 +102,7 @@ jobs:
 
       - name: Subir PDF compilado a GitHub
         if: success()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ugr-tesis-${{ matrix.os }}${{ matrix.compiler }}
           path: main.pdf
