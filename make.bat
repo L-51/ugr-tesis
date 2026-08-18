@@ -10,7 +10,7 @@ set TARGET=%1
 if "%TARGET%"=="" set TARGET=all
 
 REM Engine handling
-set ENGINES=-xelatex -lualatex -pdflatex
+set ENGINES=-xelatex -lualatex -pdf
 set ENGINE=-xelatex
 if not "%~2"=="" (
     if "%~2"=="-xelatex" (
