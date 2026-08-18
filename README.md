@@ -19,7 +19,7 @@
   <h2>
   </h2>
   
-  <a href="https://github.com/L-51/ugr-tesis/releases"><img src="https://img.shields.io/github/v/release/L-51/ugr-tesis?label=Release&style=for-the-badge" alt="Release"></a>
+  <a href="https://github.com/L-51/ugr-tesis/releases"><img src="https://img.shields.io/github/v/release/L-51/ugr-tesis?display_name=tag&style=for-the-badge" alt="Release"></a>
   <a href="https://www.overleaf.com/docs?snip_uri=https://github.com/L-51/ugr-tesis/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/Open%20in-Overleaf-47A141?style=for-the-badge&logo=overleaf" alt="Open in Overleaf"></a>
   <a href="https://github.com/L-51/ugr-tesis/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/L-51/ugr-tesis/ci.yml?style=for-the-badge&logo=github" alt="CI"></a>
   <a href="https://www.ugr.es/"><img src="https://img.shields.io/badge/UGR-Tesis-000000?style=for-the-badge&labelColor=CE0037" alt="ugr-tesis-logo"></a>
