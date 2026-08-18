@@ -63,6 +63,8 @@ jobs:
             emptypage
             algorithm2e
             lastpage
+            parskip
+            fancyhdr
 
       - name: Compilar TFG (Unix)
         if: runner.os != 'Windows'
