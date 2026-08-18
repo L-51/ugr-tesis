@@ -69,6 +69,7 @@ jobs:
             lastpage
             parskip
             pdfpages
+            ifoddpage
 
       - name: Compilar TFG (Unix)
         if: runner.os != 'Windows'
