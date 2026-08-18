@@ -20,7 +20,6 @@ jobs:
   build:
     name: ${{ matrix.os }} | ${{ matrix.compiler }}
     
-    # 1. LA MAGIA: Probamos en Ubuntu, Windows y Mac
     runs-on: ${{ matrix.os }}
     
     strategy:
@@ -61,17 +60,14 @@ jobs:
             emptypage
             algorithm2e
 
-      # 2. COMPILAR EN LINUX Y MAC (Usando tu Makefile)
       - name: Compilar TFG (Unix)
         if: runner.os != 'Windows'
         run: make ENGINE=${{ matrix.compiler }} all
 
-      # 3. COMPILAR EN WINDOWS (Usando tu make.bat)
       - name: Compilar TFG (Windows)
         if: runner.os == 'Windows'
         run: .\make.bat all ${{ matrix.compiler }}
 
-      # 4. LEER EL LOG EN CASO DE ERROR (Comandos distintos para cada OS)
       - name: Mostrar Log en caso de error (Unix)
         if: failure() && runner.os != 'Windows'
         run: cat main.log
@@ -80,7 +76,6 @@ jobs:
         if: failure() && runner.os == 'Windows'
         run: type main.log
 
-      # 5. SUBIR EL ARCHIVO FINAL
       - name: Subir PDF compilado a GitHub
         if: success()
         uses: actions/upload-artifact@v4
