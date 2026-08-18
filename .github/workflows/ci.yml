@@ -70,6 +70,10 @@ jobs:
             parskip
             pdfpages
             ifoddpage
+            relsize
+            oberdiek
+            eso-pic
+            caption
 
       - name: Compilar TFG (Unix)
         if: runner.os != 'Windows'
