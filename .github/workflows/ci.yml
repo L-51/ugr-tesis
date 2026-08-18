@@ -75,6 +75,10 @@ jobs:
             eso-pic
             caption
 
+      - name: Instalar dependencias ocultas de Biber (macOs)
+        if: runner.os == 'macOS'
+        run: brew install libthai
+        
       - name: Compilar TFG (Unix)
         if: runner.os != 'Windows'
         run: make ENGINE=${{ matrix.compiler }} all
