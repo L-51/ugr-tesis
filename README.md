@@ -151,6 +151,18 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
 <ol>
   <li>
    <details>
+    <summary><h3><b>¿Qué es este repositorio?</b></h3></summary>
+    Es una plantilla junto con las herramientas necesarias para elaborar la tesis en la Universidad de Granada. Incluye la estructura del documento, configuración de LaTeX, recursos necesarios para generar y validar el documento.
+  </details>
+  </li>
+  <li>
+   <details>
+    <summary><h3><b>¿Qué es LaTeX?</b></h3></summary>
+    LaTeX es un sistema para crear documentos, especialmente usado en trabajos académicos y científicos. En este proyecto se utiliza para escribir y generar la tesis en PDF.
+  </details>
+  </li>
+  <li>
+   <details>
     <summary><h3><b>¿Es oficial?</b></h3></summary>
     <b>NO</b>, es una plantilla comunitaria, no una plantilla oficial de la Universidad de Granada.
   </details>
