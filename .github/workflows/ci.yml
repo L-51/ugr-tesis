@@ -62,6 +62,7 @@ jobs:
             iftex
             emptypage
             algorithm2e
+            lastpage
 
       - name: Compilar TFG (Unix)
         if: runner.os != 'Windows'
