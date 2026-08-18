@@ -1,8 +1,8 @@
-# vX.Y.Z — Título de la release
+# UGR-Tesis vX.Y.Z
 
 > Breve descripción de qué supone esta versión.
 
-## Novedades
+## ✨ Novedades
 
 *
 *
