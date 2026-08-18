@@ -44,14 +44,14 @@ jobs:
             biber
             biblatex
             babel-spanish
-            fontenc
-            inputenc
             fontspec
             geometry
             setspace
             amsmath
             amsfonts
+            amscls
             xcolor
+            graphics
             pgf
             pgfplots
             float
@@ -65,9 +65,10 @@ jobs:
             iftex
             emptypage
             algorithm2e
+            fancyhdr
             lastpage
             parskip
-            fancyhdr
+            pdfpages
 
       - name: Compilar TFG (Unix)
         if: runner.os != 'Windows'
