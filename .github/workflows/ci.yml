@@ -41,6 +41,8 @@ jobs:
             biber
             biblatex
             babel-spanish
+            fontenc
+            inputenc
             fontspec
             geometry
             setspace
@@ -48,6 +50,7 @@ jobs:
             amsfonts
             xcolor
             pgf
+            pgfplots
             float
             enumitem
             listings
