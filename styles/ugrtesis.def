@@ -8,6 +8,7 @@
 \def\ugrtesis@tituloEN{}
 \def\ugrtesis@colorEnlace{}
 \def\ugrtesis@firma{}
+\def\ugrtesis@declaracion{}
 
 \def\ugrtesis@labelAutor{}
 \def\ugrtesis@autor{}
@@ -49,6 +50,7 @@
     }
 }
 \newcommand{\firma}[1]{\def\ugrtesis@firma{#1}}
+\newcommand{\declaracion}[1]{\def\ugrtesis@declaracion{#1}}
 
 % Datos del Autor
 \newcommand{\autor}[2][Autor/a]{

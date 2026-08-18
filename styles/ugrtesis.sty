@@ -2,7 +2,7 @@
 % ugr-tesis -- Plantilla de Tesis de la UGR
 % ========================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/ugrtesis}[2026/08/06 v0.5.2 Configuracion UGR]
+\ProvidesPackage{styles/ugrtesis}[2026/08/06 v1.0.0 Configuracion UGR]
 
 %% Plantilla LaTeX para Trabajos Fin de Grado/Máster de la Universidad de Granada
 %% Autor: https://github.com/L-51
@@ -185,7 +185,8 @@
 % Bibliografía y Citaciones
 % ========================================
 \RequirePackage{csquotes}
-\RequirePackage[backend=biber, style=\ugrtesis@bibstyle]{biblatex}\addbibresource{references.bib} % Apunta a tu archivo de bibliografía
+\RequirePackage[backend=biber, style=\ugrtesis@bibstyle]{biblatex}
+\addbibresource{references.bib} % Donde se encontrará la bibliografía
 
 % ========================================
 % Hiperenlace
