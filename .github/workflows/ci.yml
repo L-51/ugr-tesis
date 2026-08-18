@@ -37,6 +37,9 @@ jobs:
         with:
           packages: |
             scheme-basic
+            xetex
+            luatex
+            lmodern
             latexmk
             biber
             biblatex
