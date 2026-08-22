@@ -72,8 +72,8 @@
 > [!TIP]
 > Una vez estando en el proyecto:  
 > File -> Settings -> Spelling and language, y en Spellcheck seleccionar **Spanish**.  
-> File -> Settings -> Compiler, y en Main document seleccionar **main.tex**, Compiler seleccionar pdfLaTeX, XeLaTeX o LuaLaTeX.
-> Si no dispone de cuenta premium, es recomendable que al compilar, elijas Compile Mode -> Fast [draft] (evitando así el time out), para luego elegir el modo normal y completar
+> File -> Settings -> Compiler, y en Main document seleccionar **main.tex**, Compiler seleccionar pdfLaTeX, XeLaTeX o LuaLaTeX.  
+> Si no dispone de cuenta premium, es recomendable que al compilar, elijas Compile Mode -> **Fast [draft]** (evitando así el time out), para luego elegir el modo normal y completar
 
 ## 💻 Local
 [Instalar **MiKTeX**](https://miktex.org/download)(Recomendable en Windows si tiene problema de espacio con la opción **Install missing packages on-the-fly**) o **TeXLive**(Recomendable en general).
