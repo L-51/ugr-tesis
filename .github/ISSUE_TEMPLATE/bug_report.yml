@@ -1,0 +1,61 @@
+name: 🐛 Reportar un Error (Bug)
+description: Algo no compila, el diseño se rompe o hay un fallo en el código.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por tomarte el tiempo de reportar un error! Por favor, rellena este formulario con el mayor detalle posible para que podamos reproducirlo y arreglarlo.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Comprobaciones previas
+      options:
+        - label: He buscado en los [Issues existentes](https://github.com/L-51/ugr-tesis/issues) y no he encontrado este mismo problema.
+          required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Entorno de compilación
+      description: ¿Dónde estás intentando compilar la plantilla?
+      options:
+        - Overleaf
+        - Windows (Local)
+        - Linux (Local)
+        - macOS (Local)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: engine
+    attributes:
+      label: Motor de LaTeX
+      description: ¿Qué motor de compilación estás utilizando?
+      options:
+        - XeLaTeX (Recomendado)
+        - LuaLaTeX
+        - pdfLaTeX
+        - No lo sé / Otro
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción del problema
+      description: Explica de forma clara y concisa qué es lo que falla.
+      placeholder: Al compilar la plantilla usando la opción cover=classic, el logo de la universidad se sale de la página...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs de error
+      description: Pega aquí las líneas exactas del error que te da la terminal o el contenido de tu archivo `main.log`.
+      render: text
+    validations:
+      required: true
