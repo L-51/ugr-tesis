@@ -1,4 +1,4 @@
-name: 🐛 Reportar un Error (Bug)
+name: Reportar un Error
 description: Algo no compila, el diseño se rompe o hay un fallo en el código.
 title: "[Bug]: "
 labels: ["bug"]
