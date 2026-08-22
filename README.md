@@ -222,7 +222,7 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
 ## 🤝 Contribución
 ¡Gracias por tu interés en contribuir a `ugr-tesis`!  
 Este proyecto es de código abierto y mantenido por la comunidad. Cualquier ayuda para mejorar la plantilla, corregir errores o adaptarla a nuevas facultades es bienvenida.  
-Más información en [CONTRIBUTING.md](CONTRIBUTING.md).
+Más información en [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
 <h2></h2>
 <p align="center"><small>Este proyecto está disponible bajo la <a href="./LICENSE">licencia MIT</a></small></p>
