@@ -224,5 +224,8 @@ Una vez abierto, selecciona `main.tex`, con `Ctrl + S` se activará automáticam
 Este proyecto es de código abierto y mantenido por la comunidad. Cualquier ayuda para mejorar la plantilla, corregir errores o adaptarla a nuevas facultades es bienvenida.  
 Más información en [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
+---
+<p align="center"><small>Si esta plantilla te ha ahorrado horas de formato en tu Trabajo Fin de Grado, el mayor agradecimiento que puedes hacernos es darle una ⭐ al repositorio y mencionarlo a tus compañeros.</small></p>
+
 <h2></h2>
 <p align="center"><small>Este proyecto está disponible bajo la <a href="./LICENSE">licencia MIT</a></small></p>
