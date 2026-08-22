@@ -37,5 +37,3 @@ Si has arreglado un error o programado una mejora y quieres añadirla al proyect
 
 Agradecemos enormemente el esfuerzo y las contribuciones de todos los colaboradores mencionados anteriormente. Si consideran que este proyecto les ha sido de ayuda para su trabajo de fin de grado o su tesis, agradeceríamos que lo mencionaran en la sección de agradecimientos.
 
----
-<p align="center"><small>Si esta plantilla te ha ahorrado horas de formato en tu Trabajo Fin de Grado, el mayor agradecimiento que puedes hacernos es darle una ⭐ al repositorio y mencionarlo a tus compañeros.</small></p>
