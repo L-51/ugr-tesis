@@ -47,7 +47,7 @@ body:
     attributes:
       label: Descripción del problema
       description: Explica de forma clara y concisa qué es lo que falla.
-      placeholder: Al compilar la plantilla usando la opción cover=classic, el logo de la universidad se sale de la página...
+      placeholder: Al compilar la plantilla usando los opciones bibstyle = apa, math = false, la bibliografía no muestra el formato correcto...
     validations:
       required: true
 
