@@ -1,0 +1,27 @@
+name: Proponer una Mejora
+description: Sugerir una nueva funcionalidad, un nuevo estilo de portada o configuración.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¿Tienes una idea para mejorar `ugr-tesis`? ¡Cuéntanosla!
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: ¿Tu petición está relacionada con un problema?
+      description: Explica si esta mejora resuelve alguna frustración o limitación actual.
+      placeholder: Como estudiante de Psicología, el grado me obliga a...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solución propuesta
+      description: Describe cómo te gustaría que funcionase la plantilla.
+      placeholder: Me gustaría que al pasar la opción [faculty=letras] el paquete cargara automáticamente...
+    validations:
+      required: true
