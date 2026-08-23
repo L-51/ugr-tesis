@@ -2,7 +2,4 @@ blank_issues_enabled: false
 contact_links:
   - name: Preguntas y discusiones
     url: https://github.com/L-51/ugr-tesis/discussions
-    about: Para preguntar dudas, realizar por discussion.
-  - name: GitHub Security Bug Bounty
-    url: https://bounty.github.com/
-    about: Please report security vulnerabilities here.
+    about: Por favor, usa la sección de Discussions (Discusiones) para resolver dudas de cómo usar LaTeX o la plantilla.
