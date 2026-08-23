@@ -7,6 +7,10 @@
     <img alt="UGR Tesis Banner" src="https://github.com/user-attachments/assets/b5f3644b-f95c-4c83-86a3-05d6e6681790">
   </picture>
   
+  <hr>
+  <p align="center">
+    Español | <a href="README.en.md">English</a>
+  </p>
   <h2>    
   </h2>
 </div>
