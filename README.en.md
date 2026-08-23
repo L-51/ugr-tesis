@@ -6,7 +6,11 @@
     <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/e57df350-5019-4675-91a8-aeecd0b5c756">
     <img alt="UGR Tesis Banner" src="https://github.com/user-attachments/assets/b5f3644b-f95c-4c83-86a3-05d6e6681790">
   </picture>
-  
+
+  <hr>
+  <p align="center">
+    <a href="README.md">Español</a> | English
+  </p>
   <h2>    
   </h2>
 </div>
